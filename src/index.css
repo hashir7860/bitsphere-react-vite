@@ -1,0 +1,63 @@
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
+
+body {
+  @apply bg-[#1A202C] text-gray-300 font-thin;
+}
+
+/* Background and Content */
+.bg-dark {
+  background-color: #1A202C; /* Dark Blue */
+}
+
+.text-light {
+  color: #E0E0E0; /* Light Gray for content */
+}
+
+.text-heading {
+  color: #FFFFFF; /* White for headings */
+}
+
+/* Button Styles */
+.button-primary {
+  @apply bg-[#3498db] text-white py-2 px-4 rounded-md hover:bg-[#2980b9];
+}
+
+.button-secondary {
+  @apply bg-[#34495e] text-white py-2 px-4 rounded-md hover:bg-[#2C3E50];
+}
+
+/* Links and Other Text Elements */
+a {
+  @apply text-[#3498db] hover:text-[#1ABC9C];
+}
+
+/* Accent Background */
+.accent-background {
+  @apply bg-[#1ABC9C]; /* Teal for sections or highlights */
+}
+
+/* Hover states for interactive elements */
+.hover\:bg-dark:hover {
+  background-color: #2C3E50; /* Darker shade for hover */
+}
+
+
+body {
+  @apply  text-gray-300 font-thin;
+}
+
+@layer components {
+  .sub-menu {
+    @apply absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur bg-white/[0.04];
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center;
+  }
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+}
