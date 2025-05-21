@@ -1,6 +1,6 @@
 import { section } from 'framer-motion/client'
 import React from 'react'
-
+import about from '../assets/about.jpg'
 function About() {
     return (
         <section className='bg-skyblue py-5 mt-5'>
@@ -20,7 +20,7 @@ function About() {
                         </button>
                     </div>
                     <div>
-                        <img src="/Assets/about.jpg" alt="" className="img-fluid img-rounded" />
+                        <img src={about} alt="" className="img-fluid img-rounded" />
                     </div>
                 </div>
             </div>

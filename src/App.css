@@ -280,7 +280,7 @@ body {
 
 .counter-bg {
   /* min-height: 120vh; */
-  background: url(/public/Assets/count-bg.jpg);
+  background: url('../src/assets/count-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
