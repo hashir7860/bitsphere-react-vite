@@ -62,7 +62,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-7xl font-bold leading-tight text-white pb-2"
+          className="text-4xl md:text-7xl lg:text-7xl font-bold leading-tight text-white pb-2"
         >
           Build Modern <br className="hidden md:block" /> Software With Us
         </motion.h1>
