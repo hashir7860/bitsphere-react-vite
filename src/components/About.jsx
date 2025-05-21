@@ -10,7 +10,7 @@ function About() {
                         <h2 className="text-4xl font-bold mb-4 text-gray-800">
                             About <span className="text-blue-500">Us</span>
                         </h2>
-                        <p className="text-xl lg:text-lg text-gray-600 max-w-3xl mx">
+                        <p className="text-md lg:text-lg text-gray-600 max-w-3xl mx">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut maxime error distinctio delectus vitae possimus beatae, sint dignissimos? Eum repellat aliquam, praesentium quibusdam perspiciatis excepturi eos doloribus adipisci pariatur accusamus?
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut maxime error distinctio delectus vitae possimus beatae, sint dignissimos? Eum repellat aliquam, praesentium quibusdam perspiciatis excepturi eos doloribus adipisci pariatur accusamus?
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut maxime error distinctio delectus vitae possimus beatae, sint dignissimos? Eum repellat aliquam, praesentium quibusdam perspiciatis excepturi eos doloribus adipisci pariatur accusamus?
