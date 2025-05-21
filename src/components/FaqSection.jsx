@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa6";
 
 const faqs = [
   {
     question: "What services do you offer?",
     answer:
-      "We offer a wide range of services including web development, UI/UX design, and app development tailored to your business needs.",
+      "We offer a wide range of services including web development, UI/UX design, and app development tailored to your business needs.We offer a wide range of services including web development, UI/UX design, and app development tailored to your business needs.We offer a wide range of services including web development, UI/UX design, and app development tailored to your business needs.",
   },
   {
     question: "How long does a project take?",
@@ -49,23 +50,24 @@ const FaqItem = ({ faq }) => {
 
   return (
     <div
-      className="bg-white/5 hover:bg-white/10 p-4 rounded-xl duration-300 cursor-pointer"
+      className="bg-white p-5 rounded-xl duration-300 cursor-pointer"
       onClick={() => setOpen(!open)}
     >
       <div className="flex justify-between items-center font-semibold">
-        <h4 className="text-white">{faq.question}</h4>
+        <h4 className="text-gray-800 text-lg">{faq.question}</h4>
         <motion.span
           initial={{ rotate: 0 }}
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.3 }}
           className="text-[oklch(62.3% 0.214 259.815)]"
         >
-          ⌄
+          {/* ⌄ */}
+          <FaChevronDown />
         </motion.span>
       </div>
       {open && (
         <motion.p
-          className="text-sm text-gray-300 mt-2"
+          className="text-sm text-gray-800 mt-2"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           transition={{ duration: 0.3 }}
@@ -83,32 +85,22 @@ const FaqSection = () => {
   const rightFAQs = faqs.slice(half);
 
   return (
-    <section className="py-24 bg-[#18181A] text-white relative overflow-hidden">
-      {/* subtle background animation or visuals */}
-      {/* <motion.div
-        className="absolute -top-32 left-0 w-full h-96 blur-3xl opacity-40"
-        animate={{ x: [0, 50, -50, 0], y: [0, -30, 30, 0] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        style={{
-          background: "radial-gradient(circle at center, oklch(62.3% 0.214 259.815) 0%, transparent 70%)",
-        }}
-      ></motion.div> */}
-
+    <section className="py-24 bg-skyblue text-gray-800 relative overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-10 text-center text-white">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-gray-800">Frequently Asked Questions</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-1 gap-6">
           <div className="space-y-4">
             {leftFAQs.map((faq, index) => (
               <FaqItem key={index} faq={faq} />
             ))}
           </div>
 
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             {rightFAQs.map((faq, index) => (
               <FaqItem key={index + half} faq={faq} />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

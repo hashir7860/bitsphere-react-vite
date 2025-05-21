@@ -114,18 +114,18 @@ const ServicesSection = () => {
   return (
     <section className="py-20 bg-white min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+          <h2 className="text-5xl font-bold mb-4 text-gray-800">
             Our <span className="text-blue-500">Expertise</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions tailored to your business needs
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ducimus, asperiores fugiat quasi fugit ratione voluptate enim eos eum
           </p>
         </motion.div>
 
@@ -136,20 +136,19 @@ const ServicesSection = () => {
               {services.map((service) => (
                 <motion.button
                   key={service.id}
-                  className={`p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${
-                    selectedService.id === service.id
-                      ? 'bg-gradient-to-r  from-blue-400 to-blue-600 text-white shadow-lg'
-                      : 'bg-blue-50 hover:bg-blue-100 text-gray-800 border border-blue-100'
-                  }`}
+                  className={`p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
+                      // ? 'bg-gradient-to-r  from-blue-400 to-blue-600 text-white shadow-lg'
+                      ? 'bg-[#00A6FF]  from-blue-400 to-blue-600 text-white shadow-lg'
+                      : 'bg-[#ebf8ff] hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-blue-100'
+                    }`}
                   onClick={() => setSelectedService(service)}
                   whileHover={{ y: -5 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className={`p-2 rounded-lg ${
-                    selectedService.id === service.id 
-                      ? 'bg-white text-blue-500' 
+                  <div className={`p-2 rounded-lg ${selectedService.id === service.id
+                      ? 'bg-white text-blue-500'
                       : 'bg-blue-500 text-white'
-                  }`}>
+                    }`}>
                     {service.icon}
                   </div>
                   <span className="font-medium">{service.name}</span>
@@ -176,7 +175,7 @@ const ServicesSection = () => {
                   {selectedService.name}
                 </h3>
                 <p className="text-gray-600 mb-6">{selectedService.description}</p>
-                
+
                 <div className="mb-8">
                   <h4 className="font-semibold mb-4 text-lg text-gray-800">Key Features</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">

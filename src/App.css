@@ -5,6 +5,11 @@
   text-align: center;
 } */
 
+body {
+  background: white;
+  font-family: "Roboto", sans-serif !important;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -54,13 +59,13 @@
   /* position: absolute;
   top: 420px; */
   color: white;
-  font-family: cursive;
+  /* font-family: cursive; */
   border: 1px solid white;
   text-decoration: none;
 }
 
 .heading-1 {
-  font-family: "cursive";
+  /* font-family: "cursive"; */
   position: absolute;
   top: 255px;
   font-size: 46px;
@@ -243,7 +248,7 @@
 }
 
 .hero {
-  min-height: 120vh;
+  min-height:       110vh;
   background: url(assets/modern-equipped-computer-lab1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,6 +264,56 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   mix-blend-mode: Luminosity;
+}
+
+.free-consultant-btn {
+  background: #00a6ff;
+  font-size: 16px;
+  color: var(--color-white);
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.counter-bg {
+  /* min-height: 120vh; */
+  background: url(/public/Assets/count-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+}
+
+.counter-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  mix-blend-mode: Luminosity;
+  z-index: -1;
+}
+
+.img-rounded {
+  border-radius: 15px;
+}
+
+.bg-skyblue {
+  background: #ebf8ff;
+}
+
+.section-margin{
+  margin: 80px 0;
+}
+
+.section-padding{
+  padding: 50px 0;
 }
 
 /* .client-section{

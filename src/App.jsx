@@ -6,7 +6,7 @@ import Navbar from "./Layout/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Hero from "./Layout/Hero";
-// import ClientsSection from "./components/ClientSection";
+import ClientsSection from "./components/ClientSection";
 import ServicesSection from "./components/ServicesSection";
 import Projects from "./components/Projects";
 import TeamSection from "./components/TeamSection";
@@ -61,7 +61,9 @@ import Support from "./pages/contact/Support";
 import Location from "./pages/contact/Location";
 import ScheduleDemo from "./pages/contact/ScheduleDemo";
 import Feedback from "./pages/contact/Feedback";
+import Counter from "./components/Counter";
 import About from "./components/About";
+import CallToAction from "./components/CallToAction";
 
 function App() {
   const [onlineCount, setOnlineCount] = useState(0);
@@ -102,12 +104,14 @@ function App() {
             element={
               <>
                 <Hero />
-                {/* <ClientsSection /> */}
-                <About/>
                 <ServicesSection />
+                <ClientsSection />
+                <Counter/>
+                <About/>
                 <Projects />
-                <TeamSection />
+                {/* <TeamSection /> */}
                 <Expertise />
+                <CallToAction/>
                 <Testimonials />
                 <FaqSection />
               </>
@@ -174,12 +178,12 @@ function App() {
 
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="text-center mt-4">
+      {/* <div className="text-center mt-4">
         <h1 className="text-2xl sm:text-md">
           👀 {onlineCount} {onlineCount === 1 ? "person is" : "people are"}{" "}
           viewing this site right now
         </h1>
-      </div>
+      </div> */}
     </Router>
   );
 }

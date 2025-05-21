@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-white text-gray-800 pt-20 pb-12 relative overflow-hidden border-t border-blue-100"
+      className="bg-[#000A24] text-white pt-20 pb-12 relative overflow-hidden border-t border-blue-100"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -25,7 +25,7 @@ const Footer = () => {
     >
       {/* Animated background elements - updated to light blue */}
       <div className="absolute inset-0 opacity-20">
-        <motion.div 
+        <motion.div
           className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
@@ -37,7 +37,7 @@ const Footer = () => {
             repeatType: "reverse"
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
@@ -68,35 +68,35 @@ const Footer = () => {
                 <span className="text-white font-bold text-xl">TechBasePro</span>
               </div>
             </motion.div> */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
-  whileHover={{ scale: 1.1, }} // Scale up and change background on hover
-  className="flex items-center gap-3 mb-6"
->
-  <div className="h-10 bg-blue-500 rounded-lg flex items-center justify-start px-4 cursor-pointer">
-    <span className="text-white font-bold text-sm tracking-tight">
-      TechBasePro
-    </span>
-  </div>
-</motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              whileHover={{ scale: 1.1, }} // Scale up and change background on hover
+              className="flex items-center gap-3 mb-6"
+            >
+              <div className="h-10 bg-blue-500 rounded-lg flex items-center justify-start px-4 cursor-pointer">
+                <span className="text-white font-bold text-sm tracking-tight">
+                  TechBasePro
+                </span>
+              </div>
+            </motion.div>
 
 
-            <p className="text-gray-600 mb-6">
+            <p className="text-white mb-6">
               Building exceptional digital experiences and innovative solutions for the modern world.
             </p>
             <div className="flex gap-4">
               {[
-                { icon: <Facebook size={20} />, color: "hover:text-blue-500" },
-                { icon: <Twitter size={20} />, color: "hover:text-blue-400" },
-                { icon: <Linkedin size={20} />, color: "hover:text-blue-600" },
-                { icon: <Github size={20} />, color: "hover:text-gray-600" }
+                { icon: <Facebook size={20} />, color: "hover:text-white" },
+                { icon: <Twitter size={20} />, color: "hover:text-white" },
+                { icon: <Linkedin size={20} />, color: "hover:text-white" },
+                { icon: <Github size={20} />, color: "hover:text-white" }
               ].map((social, i) => (
                 <motion.a
                   key={i}
                   href="#"
-                  className={`text-gray-500 transition-colors ${social.color}`}
+                  className={`text-white transition-colors ${social.color}`}
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -113,7 +113,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold text-xl mb-6 text-gray-800">Quick Links</h4>
+            <h4 className="font-bold text-xl mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3">
               {['Home', 'About Us', 'Services', 'Portfolio', 'Blog', 'Contact'].map((link, i) => (
                 <motion.li
@@ -123,7 +123,7 @@ const Footer = () => {
                 >
                   <a
                     href="#"
-                    className="text-gray-600 hover:text-blue-500 transition-colors flex items-center gap-2"
+                    className="text-white hover:text-white transition-colors flex items-center gap-2"
                   >
                     <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
                     {link}
@@ -140,7 +140,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold text-xl mb-6 text-gray-800">Services</h4>
+            <h4 className="font-bold text-xl mb-6 text-white">Services</h4>
             <ul className="space-y-3">
               {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Cloud Solutions', 'AI Integration', 'Consulting'].map((service, i) => (
                 <motion.li
@@ -150,7 +150,7 @@ const Footer = () => {
                 >
                   <a
                     href="#"
-                    className="text-gray-600 hover:text-blue-500 transition-colors flex items-center gap-2"
+                    className="text-white hover:text-white transition-colors flex items-center gap-2"
                   >
                     <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
                     {service}
@@ -167,24 +167,24 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold text-xl mb-6 text-gray-800">Contact Us</h4>
+            <h4 className="font-bold text-xl mb-6 text-white">Contact Us</h4>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
-                <MapPin className="text-blue-500 mt-1 flex-shrink-0" size={18} />
+                <MapPin className="text-white mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-600">1234 Tech Street, Silicon Valley, CA 94000</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="text-blue-500" size={18} />
-                <a href="mailto:hello@ilt.com" className="text-gray-600 hover:text-blue-500">sales@TechBasePro.com</a>
+                <Mail className="text-white" size={18} />
+                <a href="mailto:hello@ilt.com" className="text-white hover:text-white">sales@TechBasePro.com</a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="text-blue-500" size={18} />
-                <a href="tel:+1234567890" className="text-gray-600 hover:text-blue-500">+1 (234) 567-890</a>
+                <Phone className="text-white" size={18} />
+                <a href="tel:+1234567890" className="text-white hover:text-white">+1 (234) 567-890</a>
               </li>
             </ul>
-
+{/* 
             <div>
-              <h5 className="font-semibold mb-4 text-gray-800">Stay Updated</h5>
+              <h5 className="font-semibold mb-4 text-white">Stay Updated</h5>
               <form onSubmit={handleSubmit} className="flex">
                 <input
                   type="email"
@@ -192,7 +192,7 @@ const Footer = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
                   required
-                  className="bg-blue-50 text-gray-800 px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-300 border border-blue-200 flex-grow"
+                  className="bg-blue-50 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-300 border border-blue-200 flex-grow"
                 />
                 <motion.button
                   type="submit"
@@ -209,19 +209,19 @@ const Footer = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="text-green-500 text-sm mt-2"
+                    className="text-white text-sm mt-2"
                   >
                     Thank you for subscribing!
                   </motion.p>
                 )}
               </AnimatePresence>
-            </div>
+            </div> */}
           </motion.div>
         </div>
 
         {/* Copyright */}
         <motion.div
-          className="mt-16 pt-8 border-t border-blue-100 text-center text-gray-500 text-sm"
+          className="mt-16 pt-8 border-t border-blue-100 text-center text-white text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
@@ -229,9 +229,9 @@ const Footer = () => {
         >
           <p>© {new Date().getFullYear()} TechBasePro Technologies. All rights reserved.</p>
           <div className="flex justify-center gap-6 mt-4">
-            <a href="#" className="hover:text-blue-500">Privacy Policy</a>
-            <a href="#" className="hover:text-blue-500">Terms of Service</a>
-            <a href="#" className="hover:text-blue-500">Cookies</a>
+            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <a href="#" className="hover:text-white">Terms of Service</a>
+            <a href="#" className="hover:text-white">Cookies</a>
           </div>
         </motion.div>
       </div>

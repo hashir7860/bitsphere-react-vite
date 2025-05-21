@@ -29,19 +29,19 @@ const ClientsSection = () => {
   return (
     <section 
       ref={sectionRef} 
-      className="relative h-[300vh] client-section"
+      className="relative h-[300vh] client-section bg-skyblue"
       style={{ background }}
     >
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-12"
+            className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <motion.h2
-              className="text-4xl md:text-6xl font-bold mb-4 text-white"
+              className="text-4xl md:text-6xl font-bold mb-4 text-gray-800"
               style={{
                 opacity: useTransform(scrollYProgress, [0, 0.2], [1, 0.8]),
                 y: useTransform(scrollYProgress, [0, 0.2], [0, -50]),
@@ -52,7 +52,7 @@ const ClientsSection = () => {
             <motion.p
               className="text-lg text-gray-600 max-w-2xl mx-auto"
               style={{
-                opacity: useTransform(scrollYProgress, [0, 0.3], [1, 0]),
+              //   opacity: useTransform(scrollYProgress, [0, 0.3], [1, 0]),
                 y: useTransform(scrollYProgress, [0, 0.3], [0, -30]),
               }}
             >
@@ -60,7 +60,7 @@ const ClientsSection = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
             {brands.map((brand, i) => {
               const start = i * (1 / brands.length);
               const end = (i + 1) * (1 / brands.length);

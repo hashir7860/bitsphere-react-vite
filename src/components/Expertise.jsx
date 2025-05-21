@@ -70,7 +70,7 @@ const Expertise = () => {
           {/* Navigation Arrows */}
           <motion.button
             onClick={() => scrollCards("left")}
-            className="absolute -left-12 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-blue-100 hover:bg-blue-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
+            className="absolute -left-7 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-blue-100 hover:bg-blue-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -79,7 +79,7 @@ const Expertise = () => {
 
           <motion.button
             onClick={() => scrollCards("right")}
-            className="absolute -right-12 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-blue-100 hover:bg-blue-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
+            className="absolute -right-7 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-blue-100 hover:bg-blue-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
