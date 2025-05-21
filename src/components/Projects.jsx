@@ -29,7 +29,7 @@ const Projects = () => {
   return (
     <main ref={container} className="relative bg-white">
       {/* Hero Section */}
-      <div className="h-screen flex items-center justify-center relative overflow-hidden">
+      <div className="my-20 flex items-center justify-center relative overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

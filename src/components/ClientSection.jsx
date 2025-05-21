@@ -32,7 +32,7 @@ const ClientsSection = () => {
       className="relative h-[300vh] client-section bg-skyblue"
       style={{ background }}
     >
-      <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center px-4 overflow-hidden">
+      <div className="sticky top-0 py-15 w-full flex flex-col items-center justify-center px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"

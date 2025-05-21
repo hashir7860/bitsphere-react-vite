@@ -196,7 +196,7 @@ const ServicesSection = () => {
 
                 <div>
                   <h4 className="font-semibold mb-4 text-lg text-gray-800">Technologies We Use</h4>
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 flex-wrap">
                     {selectedService.tech.map((tech, index) => (
                       <motion.div
                         key={index}

@@ -33,7 +33,7 @@ const Hero = () => {
       {/* Conditionally render Particle Background */}
       {showParticles && <ParticleBackground density={80} color="#89CFF0" />}
 
-      <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 group">
+      {/* <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 group">
         <div
           className="bg-blue-500 text-white rounded-l-full shadow-lg flex items-center overflow-hidden transition-all duration-300 ease-in-out w-12 group-hover:w-38 cursor-pointer"
           onClick={toggleParticles}
@@ -43,7 +43,7 @@ const Hero = () => {
             {showParticles ? "Hide Particles" : "Show Particles"}
           </span>
         </div>
-      </div>
+      </div> */}
 
       <div className="z-10 relative flex flex-col items-center max-w-6xl mx-auto">
         {/* Animated gradient text for main headline */}
