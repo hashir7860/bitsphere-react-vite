@@ -28,9 +28,9 @@ body {
 }
 
 /* Links and Other Text Elements */
-a {
+/* a {
   @apply text-[#3498db] hover:text-[#1ABC9C];
-}
+} */
 
 /* Accent Background */
 .accent-background {
