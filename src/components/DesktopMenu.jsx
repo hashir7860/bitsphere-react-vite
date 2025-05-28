@@ -2,6 +2,7 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { a } from "framer-motion/client";
 
 export default function DesktopMenu({ menu, isActive, setActiveMenu }) {
   const [activeSubMenu, setActiveSubMenu] = useState(null);

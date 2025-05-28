@@ -25,16 +25,32 @@ import {
 export const Menus = [
   {
     name: "About Us",
+    path: "/about-us",
   },
   {
     name: "Portfolio",
+    path: "/portfolio",
   },
   {
     name: "Privacy Policy",
+    path: "/privacy",
   },
   {
     name: "Contact Us",
+    path: "/get-in-touch",
   },
+  // {
+  //   name: "About Us",
+  // },
+  // {
+  //   name: "Portfolio",
+  // },
+  // {
+  //   name: "Privacy Policy",
+  // },
+  // {
+  //   name: "Contact Us",
+  // },
   // {
   //   name: "What We Do",
   //   subMenu: [
@@ -94,7 +110,7 @@ export const Menus = [
   //       icon: Rocket,
   //       path:"/emerging-technologies",
   //       featured: true // Add this flag for featured items
-        
+
   //     },
   //     {
   //       name: "Blockchain & Web3.0",

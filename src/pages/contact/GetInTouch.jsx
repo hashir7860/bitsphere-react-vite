@@ -64,7 +64,7 @@ const GetInTouch = () => {
     {
       icon: MapPin,
       title: "Office",
-      value: "123 Tech Street, San Francisco",
+      value: "W1K 3EP 49 Grosvenor square Mayfair, London",
       color: "from-blue-500 to-blue-600",
       action: "#map",
     },
@@ -89,13 +89,13 @@ const GetInTouch = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center relative overflow-hidden"
+        className="py-32 mx-auto text-center relative overflow-hidden contact-hero"
       >
         {/* Floating tech elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-100 rounded-full filter blur-3xl"></div>
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ const GetInTouch = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white"
           >
             Get in{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
@@ -128,7 +128,7 @@ const GetInTouch = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-white"
           >
             Have a project in mind or want to collaborate? Reach out—we'd love
             to hear from you.
@@ -370,7 +370,7 @@ const GetInTouch = () => {
             </motion.div>
 
             {/* Office Hours */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -398,13 +398,12 @@ const GetInTouch = () => {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </section>
 
-      {/* Interactive Map Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +412,6 @@ const GetInTouch = () => {
           className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-all"
         >
           <div className="h-96 w-full relative">
-            {/* Animated map placeholder */}
             <div className="absolute inset-0 bg-blue-50 flex items-center justify-center">
               <motion.div
                 className="text-center p-8"
@@ -434,7 +432,7 @@ const GetInTouch = () => {
                 </motion.div>
                 <h3 className="text-2xl font-bold mb-2">Our Headquarters</h3>
                 <p className="text-gray-600 max-w-md mx-auto mb-6">
-                  123 Tech Street, San Francisco, CA 94107
+                  W1K 3EP 49 Grosvenor square Mayfair, London
                 </p>
                 <motion.button
                   whileHover={{
@@ -450,7 +448,7 @@ const GetInTouch = () => {
             </div>
           </div>
         </motion.div>
-      </section>
+      </section> */}
 
       {/* Enhanced CTA Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Users, Rocket, Globe, Award, Code, Heart, Shield, Clock } from "lucide-react";
 import { useState } from "react";
+import About from "../../components/About";
+import FaqSection from "../../components/FaqSection";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('mission');
@@ -71,51 +73,51 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section with Interactive Background */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center relative overflow-hidden"
+        className="py-32 contact-hero mx-auto text-center relative overflow-hidden"
       >
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-100 rounded-full filter blur-3xl"></div>
-        </div>
-        
-          <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="relative z-10"
-                >
+        </div> */}
 
         <motion.div
-          initial={{ y: -20 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-blue-200"
-        >
-          <p className="text-sm font-medium text-blue-600">Our Story</p>
-        </motion.div>
-        
-        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+          transition={{ duration: 0.8 }}
+          className="relative z-10"
         >
-          Building the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">Digital Future</span>
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-        >
-          We're a passionate team of innovators, creators, and problem-solvers dedicated to transforming businesses through technology.
-        </motion.p>
+
+          <motion.div
+            initial={{ y: -20 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-blue-200"
+          >
+            <p className="text-sm font-medium text-blue-600">Our Story</p>
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-4xl text-white md:text-6xl font-bold mb-6 leading-tight"
+          >
+            Building the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">Digital Future</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-xl text-gray-600 text-white max-w-3xl mx-auto leading-relaxed"
+          >
+            We're a passionate team of innovators, creators, and problem-solvers dedicated to transforming businesses through technology.
+          </motion.p>
         </motion.div>
 
       </motion.section>
@@ -155,6 +157,8 @@ const AboutUs = () => {
         </div>
       </section>
 
+      <About />
+
       {/* Interactive Tabs Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8">
@@ -170,11 +174,10 @@ const AboutUs = () => {
                 <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
-                    activeTab === tab.id 
-                      ? 'bg-blue-100 border-l-4 border-blue-500 text-blue-600 font-medium' 
-                      : 'hover:bg-blue-50 text-gray-700'
-                  }`}
+                  className={`w-full text-left px-4 py-3 rounded-lg transition-all ${activeTab === tab.id
+                    ? 'bg-blue-100 border-l-4 border-blue-500 text-blue-600 font-medium'
+                    : 'hover:bg-blue-50 text-gray-700'
+                    }`}
                   whileHover={{ x: 5 }}
                 >
                   {tab.label}
@@ -260,7 +263,7 @@ const AboutUs = () => {
                   <div className="relative">
                     {/* Timeline line */}
                     <div className="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
-                    
+
                     <div className="space-y-8">
                       {timeline.map((item, index) => (
                         <motion.div
@@ -342,7 +345,7 @@ const AboutUs = () => {
             What makes us different goes beyond technology
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
@@ -396,7 +399,7 @@ const AboutUs = () => {
             <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/20 rounded-full filter blur-3xl"></div>
             <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-400/20 rounded-full filter blur-3xl"></div>
           </div>
-          
+
           <h2 className="text-3xl font-bold mb-4 relative z-10 text-white">Join Our Journey</h2>
           <p className="text-blue-100 max-w-2xl mx-auto mb-8 relative z-10">
             Whether you're looking for a technology partner or to join our team, we'd love to connect
@@ -419,6 +422,8 @@ const AboutUs = () => {
           </div>
         </motion.div>
       </section>
+
+      <FaqSection/>
     </div>
   );
 };

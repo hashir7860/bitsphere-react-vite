@@ -64,6 +64,8 @@ import Feedback from "./pages/contact/Feedback";
 import Counter from "./components/Counter";
 import About from "./components/About";
 import CallToAction from "./components/CallToAction";
+import PrivacyPolicy from "./pages/company/PrivacyPolicy";
+import Portfolio from "./pages/company/Portfolio";
 
 function App() {
   const [onlineCount, setOnlineCount] = useState(0);
@@ -158,6 +160,8 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/privacy" element={<PrivacyPolicy/>} />
+          <Route path="/portfolio" element={<Portfolio/>} />
 
           {/* Contact Pages */}
           <Route path="/get-in-touch" element={<GetInTouch />} />
