@@ -5,6 +5,7 @@ import ContactModal from "../components/ContactModal";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [ctaModalOpen, setCtaModalOpen] = useState(false);
 
   const handleModalToggle = () => {
     setIsModalOpen(!isModalOpen);
@@ -89,7 +90,7 @@ const Hero = () => {
           transition={{ delay: 0.6 }}
         >
           {/* Primary Button - now with baby blue gradient */}
-          <motion.button
+          {/* <motion.button
             whileHover={{
               scale: 1.05,
               boxShadow: "0 0 20px rgba(137, 207, 240, 0.6)",
@@ -103,6 +104,27 @@ const Hero = () => {
               duration: 0.3,
             }}
             className="px-10 py-4 rounded-xl bg-gradient-to-r  from-blue-400 to-blue-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
+          >
+            Get Started
+            <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </motion.button> */}
+          <motion.button
+            onClick={() => setCtaModalOpen(true)}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 20px rgba(137, 207, 240, 0.6)",
+              backgroundPosition: "100% 0",
+            }}
+            whileTap={{ scale: 0.98 }}
+            transition={{
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+              duration: 0.3,
+            }}
+            className="px-10 py-4 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
           >
             Get Started
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -151,6 +173,66 @@ const Hero = () => {
       <AnimatePresence>
         {isModalOpen && <ContactModal onClose={() => setIsModalOpen(false)} />}
       </AnimatePresence>
+
+      {/* cta modal section */}
+      {ctaModalOpen && (
+        // <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        //   <div className="bg-white p-6 rounded-xl max-w-md w-full shadow-lg">
+        //     <h2 className="text-xl font-bold mb-4">Welcome!</h2>
+        //     <p className="mb-4">This is a modal triggered by your button.</p>
+        //     <button
+        //       onClick={() => setCtaModalOpen(false)}
+        //       className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        //     >
+        //       Close
+        //     </button>
+        //   </div>
+        // </div>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+          <div className="bg-white p-6 rounded-xl max-w-md w-full shadow-lg">
+            <h2 className="text-xl font-bold mb-4">Contact Us</h2>
+            <form className="space-y-4">
+              <input
+                placeholder="Name"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                type="text"
+              />
+              <input
+                placeholder="Phone"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                type="tel"
+              />
+              <input
+                placeholder="Email"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                type="email"
+              />
+              <textarea
+                placeholder="Message"
+                rows="5"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              >
+              </textarea>
+              <div className="flex gap-3 justify-center">
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setCtaModalOpen(false)}
+                  className="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+      {/* End cta modal section */}
 
       {/* Decorative elements - now blue */}
       {/* <div className="absolute bottom-8 left-0 right-0 flex justify-center">
