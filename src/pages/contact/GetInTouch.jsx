@@ -138,7 +138,7 @@ const GetInTouch = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="mt-12 flex justify-center gap-4"
+            className="mt-12 flex justify-center gap-4 flex-wrap"
           >
             <motion.button
               whileHover={{
