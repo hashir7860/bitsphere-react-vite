@@ -98,7 +98,7 @@ const AboutUs = () => {
             transition={{ delay: 0.2 }}
             className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-blue-200"
           >
-            <p className="text-sm font-medium text-blue-600">Our Story</p>
+            <p className="text-sm font-medium text-blue-600">OUR STORY</p>
           </motion.div>
 
           <motion.h1
