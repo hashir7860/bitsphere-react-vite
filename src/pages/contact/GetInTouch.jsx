@@ -51,28 +51,28 @@ const GetInTouch = () => {
       icon: Mail,
       title: "Email",
       value: "contact@example.com",
-      color: "from-blue-500 to-blue-600",
+      color: "from-red-500 to-red-600",
       action: "mailto:contact@example.com",
     },
     {
       icon: Phone,
       title: "Phone",
       value: "+1 (234) 567-890",
-      color: "from-blue-500 to-blue-600",
+      color: "from-red-500 to-red-600",
       action: "tel:+1234567890",
     },
     {
       icon: MapPin,
       title: "Office",
       value: "W1K 3EP 49 Grosvenor square Mayfair, London",
-      color: "from-blue-500 to-blue-600",
+      color: "from-red-500 to-red-600",
       action: "#map",
     },
   ];
 
   const socialLinks = [
-    { name: "Twitter", icon: Twitter, color: "text-blue-500", url: "#" },
-    { name: "LinkedIn", icon: Linkedin, color: "text-blue-500", url: "#" },
+    { name: "Twitter", icon: Twitter, color: "text-red-500", url: "#" },
+    { name: "LinkedIn", icon: Linkedin, color: "text-red-500", url: "#" },
     { name: "GitHub", icon: Github, color: "text-gray-600", url: "#" },
   ];
 
@@ -89,12 +89,12 @@ const GetInTouch = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-32 mx-auto text-center relative overflow-hidden contact-hero"
+        className="py-20 mx-auto text-center relative overflow-hidden contact-hero"
       >
         {/* Floating tech elements */}
         {/* <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-100 rounded-full filter blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-100 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-100 rounded-full filter blur-3xl"></div>
         </div> */}
 
         <motion.div
@@ -107,9 +107,9 @@ const GetInTouch = () => {
             initial={{ y: -20 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-blue-200"
+            className="mb-6 inline-block bg-gradient-to-r from-red-100 to-red-200 px-6 py-2 rounded-full backdrop-blur-sm border border-red-200"
           >
-            <p className="text-sm font-medium text-blue-600">Let's Connect</p>
+            <p className="text-sm font-medium text-red-600">Let's Connect</p>
           </motion.div>
 
           <motion.h1
@@ -119,7 +119,7 @@ const GetInTouch = () => {
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white"
           >
             Get in{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600">
               Touch
             </span>
           </motion.h1>
@@ -146,14 +146,14 @@ const GetInTouch = () => {
                 boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
               }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold shadow-lg flex items-center gap-2 cursor-pointer"
+              className="px-8 py-3 rounded-xl bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold shadow-lg flex items-center gap-2 cursor-pointer"
             >
               Schedule a Call <ArrowRight size={18} />
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 rounded-xl bg-white border-2 border-blue-300 text-blue-500 font-semibold hover:bg-blue-50 flex items-center gap-2 cursor-pointer"
+              className="px-8 py-3 rounded-xl bg-white border-2 border-red-300 text-red-500 font-semibold hover:bg-red-50 flex items-center gap-2 cursor-pointer"
             >
               View Our Work <ArrowRight size={18} />
             </motion.button>
@@ -179,7 +179,7 @@ const GetInTouch = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Send className="text-blue-500" /> Send Us a Message
+              <Send className="text-red-500" /> Send Us a Message
             </motion.h2>
 
             {submitSuccess && (
@@ -223,7 +223,7 @@ const GetInTouch = () => {
                         value={formData[field.id]}
                         onChange={handleChange}
                         required
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                       />
                     ) : (
                       <input
@@ -233,7 +233,7 @@ const GetInTouch = () => {
                         value={formData[field.id]}
                         onChange={handleChange}
                         required
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                       />
                     )}
                   </motion.div>
@@ -250,7 +250,7 @@ const GetInTouch = () => {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm"
+                    className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-medium py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm"
                   >
                     {isSubmitting ? (
                       <>
@@ -325,7 +325,7 @@ const GetInTouch = () => {
                     </div>
                     <div>
                       <h3 className="text-gray-500 text-sm">{method.title}</h3>
-                      <p className="text-lg font-medium group-hover:text-blue-500 transition-colors">
+                      <p className="text-lg font-medium group-hover:text-red-500 transition-colors">
                         {method.value}
                       </p>
                     </div>
@@ -356,7 +356,7 @@ const GetInTouch = () => {
                     transition={{ delay: 0.2 + index * 0.1 }}
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-50 hover:bg-blue-100 border border-blue-100 rounded-lg p-4 flex flex-col items-center gap-2 transition-all"
+                    className="bg-red-50 hover:bg-red-100 border border-red-100 rounded-lg p-4 flex flex-col items-center gap-2 transition-all"
                   >
                     <div className={`text-2xl ${social.color}`}>
                       <social.icon />
@@ -378,7 +378,7 @@ const GetInTouch = () => {
               className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3 mb-6">
-                <Clock className="text-blue-500" />
+                <Clock className="text-red-500" />
                 <h2 className="text-2xl font-bold">Office Hours</h2>
               </div>
               <div className="space-y-4">
@@ -412,7 +412,7 @@ const GetInTouch = () => {
           className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-all"
         >
           <div className="h-96 w-full relative">
-            <div className="absolute inset-0 bg-blue-50 flex items-center justify-center">
+            <div className="absolute inset-0 bg-red-50 flex items-center justify-center">
               <motion.div
                 className="text-center p-8"
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -428,7 +428,7 @@ const GetInTouch = () => {
                     },
                   }}
                 >
-                  <MapPin className="w-12 h-12 mx-auto text-blue-500 mb-4" />
+                  <MapPin className="w-12 h-12 mx-auto text-red-500 mb-4" />
                 </motion.div>
                 <h3 className="text-2xl font-bold mb-2">Our Headquarters</h3>
                 <p className="text-gray-600 max-w-md mx-auto mb-6">
@@ -440,7 +440,7 @@ const GetInTouch = () => {
                     boxShadow: "0 0 10px rgba(59, 130, 246, 0.3)",
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-all flex items-center gap-2 mx-auto shadow-sm"
+                  className="bg-gradient-to-r from-red-500 to-red-600 text-white font-medium py-2 px-6 rounded-lg transition-all flex items-center gap-2 mx-auto shadow-sm"
                 >
                   Get Directions <ArrowRight size={16} />
                 </motion.button>
@@ -457,19 +457,19 @@ const GetInTouch = () => {
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ type: "spring" }}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl p-12 text-center relative overflow-hidden"
+          className="bg-gradient-to-r from-red-500 to-red-600 rounded-3xl p-12 text-center relative overflow-hidden"
         >
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/20 rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-400/20 rounded-full filter blur-3xl"></div>
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-400/20 rounded-full filter blur-3xl"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-400/20 rounded-full filter blur-3xl"></div>
           </div>
 
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Ready to Start Your Project?
             </h2>
-            <p className="text-blue-100 max-w-2xl mx-auto mb-8 text-lg">
+            <p className="text-red-100 max-w-2xl mx-auto mb-8 text-lg">
               We're excited to hear about your ideas and help bring them to
               life.
             </p>
@@ -480,7 +480,7 @@ const GetInTouch = () => {
                   boxShadow: "0 0 30px rgba(255, 255, 255, 0.2)",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg flex items-center justify-center gap-2"
+                className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold shadow-lg flex items-center justify-center gap-2"
               >
                 Schedule a Call
                 <motion.span

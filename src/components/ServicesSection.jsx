@@ -122,43 +122,64 @@ const ServicesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-5xl font-bold mb-4 text-gray-800">
-            Our <span className="text-blue-500">Expertise</span>
+            Our <span className="text-red-500">Expertise</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ducimus, asperiores fugiat quasi fugit ratione voluptate enim eos eum
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Services Navigation */}
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-3 space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
               {services.map((service) => (
+                // <motion.button
+                //   key={service.id}
+                //   className={`p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
+                //       // ? 'bg-gradient-to-r  [#00A6FF] from-red-400 to-red-600 text-white shadow-lg'
+                //       ? 'bg-red-500 from-red-400 to-red-600 text-white shadow-lg'
+                //       : 'bg-red-100 hover:bg-red-500 hover:text-white text-gray-800 border border-red-100'
+                //     }`}
+                //   onClick={() => setSelectedService(service)}
+                //   whileHover={{ y: -5 }}
+                //   whileTap={{ scale: 0.98 }}
+                // >
+                //   <div className={`p-2 rounded-lg ${selectedService.id === service.id
+                //       ? 'bg-white text-red-500'
+                //       : 'bg-red-500 text-white'
+                //     }`}>
+                //     {service.icon}
+                //   </div>
+                //   <span className="font-medium">{service.name}</span>
+                // </motion.button>
                 <motion.button
                   key={service.id}
-                  className={`p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
-                      // ? 'bg-gradient-to-r  from-blue-400 to-blue-600 text-white shadow-lg'
-                      ? 'bg-[#00A6FF]  from-blue-400 to-blue-600 text-white shadow-lg'
-                      : 'bg-[#ebf8ff] hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-blue-100'
+                  className={`group p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
+                      ? 'bg-red-500 text-white shadow-lg'
+                      : 'bg-red-100 hover:bg-red-500 hover:text-white text-gray-800 border border-red-100'
                     }`}
                   onClick={() => setSelectedService(service)}
                   whileHover={{ y: -5 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className={`p-2 rounded-lg ${selectedService.id === service.id
-                      ? 'bg-white text-blue-500'
-                      : 'bg-blue-500 text-white'
-                    }`}>
+                  <div
+                    className={`p-2 rounded-lg transition-colors duration-300 ${selectedService.id === service.id
+                        ? 'bg-white text-red-500'
+                        : 'bg-red-500 text-white group-hover:bg-white group-hover:text-red-500'
+                      }`}
+                  >
                     {service.icon}
                   </div>
                   <span className="font-medium">{service.name}</span>
                 </motion.button>
+
               ))}
             </div>
           </div>
 
           {/* Service Details */}
-          <div className="relative">
+          <div className="lg:col-span-9 relative">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedService.id}
@@ -166,10 +187,10 @@ const ServicesSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white rounded-2xl p-8 shadow-xl h-full border border-blue-100"
+                className="bg-white rounded-2xl p-8 shadow-xl h-full border border-red-100"
               >
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-gray-800">
-                  <div className="p-2 bg-blue-500 rounded-lg text-white">
+                  <div className="p-2 bg-red-500 rounded-lg text-white">
                     {selectedService.icon}
                   </div>
                   {selectedService.name}
@@ -182,12 +203,12 @@ const ServicesSection = () => {
                     {selectedService.features.map((feature, index) => (
                       <motion.li
                         key={index}
-                        className="flex items-start gap-2 bg-blue-50 p-3 rounded-lg border border-blue-100"
+                        className="flex items-start gap-2 bg-red-50 p-3 rounded-lg border border-red-100"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: index * 0.1 }}
                       >
-                        <span className="text-blue-500 mt-1">✓</span>
+                        <span className="text-red-500 mt-1">✓</span>
                         <span className="text-gray-700">{feature}</span>
                       </motion.li>
                     ))}
@@ -205,14 +226,14 @@ const ServicesSection = () => {
                         onHoverEnd={() => setHoveredTech(null)}
                       >
                         <motion.div
-                          className="bg-blue-50 p-4 rounded-xl flex flex-col items-center gap-2 w-24 border border-blue-100"
+                          className="bg-red-50 p-4 rounded-xl flex flex-col items-center gap-2 w-24 border border-red-100"
                           whileHover={{ y: -5 }}
                         >
-                          {React.cloneElement(tech.icon, { className: "w-8 h-8 text-blue-500" })}
+                          {React.cloneElement(tech.icon, { className: "w-8 h-8 text-red-500" })}
                           <AnimatePresence>
                             {hoveredTech === index && (
                               <motion.span
-                                className="absolute -bottom-6 bg-blue-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+                                className="absolute -bottom-6 bg-red-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
                                 initial={{ opacity: 0, y: 5 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 5 }}

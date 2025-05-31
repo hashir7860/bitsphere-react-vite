@@ -30,13 +30,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen pt-20 flex hero items-center justify-center text-center px-6 bg-white text-gray-800 overflow-hidden">
+    <section className="relative min-h-screen flex hero items-center justify-center text-center px-6 bg-white text-gray-800 overflow-hidden">
       {/* Conditionally render Particle Background */}
       {showParticles && <ParticleBackground density={80} color="#89CFF0" />}
 
       {/* <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 group">
         <div
-          className="bg-blue-500 text-white rounded-l-full shadow-lg flex items-center overflow-hidden transition-all duration-300 ease-in-out w-12 group-hover:w-38 cursor-pointer"
+          className="bg-red-500 text-white rounded-l-full shadow-lg flex items-center overflow-hidden transition-all duration-300 ease-in-out w-12 group-hover:w-38 cursor-pointer"
           onClick={toggleParticles}
         >
           <span className="px-3 text-lg font-semibold">⚙</span>
@@ -75,9 +75,9 @@ const Hero = () => {
           className="mt-6 text-xl md:text-2xl text-white max-w-3xl leading-relaxed"
         >
           We craft{" "}
-          <span className="text-blue-500 font-medium">cutting-edge</span>{" "}
+          <span className="text-red-500 font-medium">cutting-edge</span>{" "}
           applications, websites, and{" "}
-          <span className="text-blue-500 font-medium">
+          <span className="text-red-500 font-medium">
             digital experiences{" "}
           </span>
           that drive measurable business growth.
@@ -89,7 +89,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          {/* Primary Button - now with baby blue gradient */}
+          {/* Primary Button - now with baby red gradient */}
           {/* <motion.button
             whileHover={{
               scale: 1.05,
@@ -103,7 +103,7 @@ const Hero = () => {
               damping: 17,
               duration: 0.3,
             }}
-            className="px-10 py-4 rounded-xl bg-gradient-to-r  from-blue-400 to-blue-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
+            className="px-10 py-4 rounded-xl bg-gradient-to-r  from-red-400 to-red-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
           >
             Get Started
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -124,7 +124,7 @@ const Hero = () => {
               damping: 17,
               duration: 0.3,
             }}
-            className="px-10 py-4 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
+            className="px-10 py-4 rounded-xl bg-gradient-to-r from-red-400 to-red-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
           >
             Get Started
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -132,7 +132,7 @@ const Hero = () => {
             </span>
           </motion.button>
 
-          {/* Secondary Button - light blue outline */}
+          {/* Secondary Button - light red outline */}
           {/* <motion.button
             whileHover={{
               scale: 1.05,
@@ -147,7 +147,7 @@ const Hero = () => {
               duration: 0.3,
             }}
             onClick={handleModalToggle}
-            className="px-10 py-4 rounded-xl border-2 border-blue-300 hover:border-blue-400 bg-white text-blue-500 font-semibold text-lg tracking-wide transition-all duration-300"
+            className="px-10 py-4 rounded-xl border-2 border-red-300 hover:border-red-400 bg-white text-red-500 font-semibold text-lg tracking-wide transition-all duration-300"
           >
             Contact Us
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -163,9 +163,9 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
         >
-          <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
+          <div className="h-px w-16 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
           <span className="mt-3">Trusted by innovative companies worldwide</span>
-          <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
+          <div className="h-px w-16 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
         </motion.div> */}
       </div>
 
@@ -182,7 +182,7 @@ const Hero = () => {
         //     <p className="mb-4">This is a modal triggered by your button.</p>
         //     <button
         //       onClick={() => setCtaModalOpen(false)}
-        //       className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        //       className="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
         //     >
         //       Close
         //     </button>
@@ -194,29 +194,29 @@ const Hero = () => {
             <form className="space-y-4">
               <input
                 placeholder="Name"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                 type="text"
               />
               <input
                 placeholder="Phone"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                 type="tel"
               />
               <input
                 placeholder="Email"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
                 type="email"
               />
               <textarea
                 placeholder="Message"
                 rows="5"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
               >
               </textarea>
               <div className="flex gap-3 justify-center">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
                 >
                   Submit
                 </button>
@@ -234,7 +234,7 @@ const Hero = () => {
       )}
       {/* End cta modal section */}
 
-      {/* Decorative elements - now blue */}
+      {/* Decorative elements - now red */}
       {/* <div className="absolute bottom-8 left-0 right-0 flex justify-center">
         <motion.div
           animate={{
@@ -245,7 +245,7 @@ const Hero = () => {
               ease: "easeInOut",
             },
           }}
-          className="text-blue-300 hover:text-blue-500 cursor-pointer"
+          className="text-red-300 hover:text-red-500 cursor-pointer"
           onClick={() =>
             window.scrollBy({
               top: window.innerHeight - 100,

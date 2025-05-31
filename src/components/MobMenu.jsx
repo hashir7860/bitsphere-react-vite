@@ -41,7 +41,7 @@
 //   return (
 //     <div className="lg:hidden">
 //       <button 
-//         className="z-[999] relative p-2 text-gray-700 hover:text-blue-600 transition-colors"
+//         className="z-[999] relative p-2 text-gray-700 hover:text-red-600 transition-colors"
 //         onClick={toggleDrawer}
 //       >
 //         {isOpen ? (
@@ -52,7 +52,7 @@
 //       </button>
 
 //       <motion.div
-//         className="fixed left-0 right-0 top-16 overflow-y-auto bg-white backdrop-blur-lg text-gray-800 p-6 pb-20 shadow-xl border-t border-blue-100"
+//         className="fixed left-0 right-0 top-16 overflow-y-auto bg-white backdrop-blur-lg text-gray-800 p-6 pb-20 shadow-xl border-t border-red-100"
 //         initial={{ x: "-100%" }}
 //         animate={{ x: isOpen ? "0%" : "-100%" }}
 //         transition={{ type: "spring", damping: 25, stiffness: 300 }}
@@ -65,7 +65,7 @@
 //               <li key={name} className="">
 //                 <div
 //                   className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
-//                     isClicked ? "bg-blue-50 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"
+//                     isClicked ? "bg-red-50 text-red-600" : "hover:bg-red-50 hover:text-red-600"
 //                   }`}
 //                   onClick={() => setClicked(isClicked ? null : i)}
 //                 >
@@ -84,16 +84,16 @@
 //                     initial="exit"
 //                     animate={isClicked ? "enter" : "exit"}
 //                     variants={subMenuDrawer}
-//                     className="ml-4 border-l-2 border-blue-100"
+//                     className="ml-4 border-l-2 border-red-100"
 //                   >
 //                     {subMenu.map(({ name, icon: Icon }) => (
 //                       <li
 //                         key={name}
-//                         className="p-3 flex items-center hover:bg-blue-50 rounded-lg gap-3 cursor-pointer text-gray-700 hover:text-blue-600 transition-colors"
+//                         className="p-3 flex items-center hover:bg-red-50 rounded-lg gap-3 cursor-pointer text-gray-700 hover:text-red-600 transition-colors"
 //                         onClick={() => handleSubMenuClick(name)}
 //                       >
 //                         {Icon && (
-//                           <Icon className="h-4 w-4 text-blue-500" />
+//                           <Icon className="h-4 w-4 text-red-500" />
 //                         )}
 //                         <span>{name}</span>
 //                       </li>
@@ -129,7 +129,7 @@ const MobMenu = ({ menus }) => {
               to={menu.path}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `block py-2 px-3 rounded-md text-sm ${isActive ? "bg-blue-100 text-blue-600" : "text-gray-700 hover:bg-gray-100"
+                `block py-2 px-3 rounded-md text-sm ${isActive ? "bg-red-100 text-red-600" : "text-gray-700 hover:bg-gray-100"
                 }`
               }
             >

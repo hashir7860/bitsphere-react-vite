@@ -12,12 +12,12 @@ function Portfolio() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="py-32 contact-hero mx-auto text-center relative overflow-hidden"
+                className="py-20 contact-hero mx-auto text-center relative overflow-hidden"
             >
                 {/* Animated background elements */}
                 {/* <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl"></div>
-                  <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-100 rounded-full filter blur-3xl"></div>
+                  <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-100 rounded-full filter blur-3xl"></div>
+                  <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-100 rounded-full filter blur-3xl"></div>
                 </div> */}
 
                 <motion.div
@@ -31,9 +31,9 @@ function Portfolio() {
                         initial={{ y: -20 }}
                         animate={{ y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-blue-200"
+                        className="mb-6 inline-block bg-gradient-to-r from-red-100 to-red-200 px-6 py-2 rounded-full backdrop-blur-sm border border-red-200"
                     >
-                        <p className="text-sm font-medium text-blue-600">Our Projects</p>
+                        <p className="text-sm font-medium text-red-600">Our Projects</p>
                     </motion.div>
 
                     <motion.h1
@@ -42,7 +42,7 @@ function Portfolio() {
                         transition={{ delay: 0.4 }}
                         className="text-4xl text-white md:text-6xl font-bold mb-6 leading-tight"
                     >
-                        Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">Portfolio</span>
+                        Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600">Portfolio</span>
                     </motion.h1>
 
                     <motion.p

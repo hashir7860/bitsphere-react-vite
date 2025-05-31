@@ -88,8 +88,8 @@
 //       <motion.span
 //         className={`flex items-center gap-1 cursor-pointer px-4 py-2 rounded-lg transition-colors ${
 //           isActive 
-//             ? "text-white bg-blue-500 shadow-md" 
-//             : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+//             ? "text-white bg-red-500 shadow-md" 
+//             : "text-gray-700 hover:text-red-600 hover:bg-red-50"
 //         }`}
 //         whileHover={{ scale: 1.05 }}
 //         whileTap={{ scale: 0.98 }}
@@ -121,7 +121,7 @@
 
 //             <motion.div
 //               ref={dropdownRef}
-//               className="fixed left-0 right-0 top-20 bg-white backdrop-blur-lg shadow-lg border-t border-blue-100"
+//               className="fixed left-0 right-0 top-20 bg-white backdrop-blur-lg shadow-lg border-t border-red-100"
 //               variants={dropdownVariants}
 //               initial="hidden"
 //               animate="visible"
@@ -142,14 +142,14 @@
 //                 <div className="grid grid-cols-4 gap-8">
 //                   {/* Left side - Menu items */}
 //                   <motion.div
-//                     className="col-span-1 border-r border-blue-100 pr-8"
+//                     className="col-span-1 border-r border-red-100 pr-8"
 //                     variants={dropdownVariants}
 //                   >
 //                     <motion.h3
 //                       className="text-lg font-semibold mb-6 text-gray-800 flex items-center gap-2"
 //                       variants={menuItemVariants}
 //                     >
-//                       <span className="bg-blue-500 w-1 h-6 rounded-full"></span>
+//                       <span className="bg-red-500 w-1 h-6 rounded-full"></span>
 //                       {menu.name}
 //                     </motion.h3>
 //                     <ul className="space-y-1">
@@ -158,8 +158,8 @@
 //                           key={i}
 //                           className={`p-3 rounded-lg transition-colors cursor-pointer ${
 //                             activeSubMenu?.name === submenu.name
-//                               ? "bg-blue-50 border-l-2 border-blue-500"
-//                               : "hover:bg-blue-50"
+//                               ? "bg-red-50 border-l-2 border-red-500"
+//                               : "hover:bg-red-50"
 //                           }`}
 //                           onMouseEnter={() => setActiveSubMenu(submenu)}
 //                           onClick={() => handleMenuItemClick(submenu)}
@@ -175,8 +175,8 @@
 //                                 <motion.div
 //                                   className={`p-2 rounded-lg ${
 //                                     activeSubMenu?.name === submenu.name
-//                                       ? "bg-blue-100 text-blue-600"
-//                                       : "bg-blue-50 text-gray-600"
+//                                       ? "bg-red-100 text-red-600"
+//                                       : "bg-red-50 text-gray-600"
 //                                   }`}
 //                                   whileHover={{ rotate: 5 }}
 //                                 >
@@ -206,14 +206,14 @@
 //                           <div className="flex items-center gap-4 mb-8">
 //                             {activeSubMenu.icon && (
 //                               <motion.div
-//                                 className="bg-blue-100 p-3 rounded-xl shadow-sm"
+//                                 className="bg-red-100 p-3 rounded-xl shadow-sm"
 //                                 initial={{ scale: 0.8 }}
 //                                 animate={{ scale: 1 }}
 //                                 transition={{ type: "spring" }}
 //                               >
 //                                 <activeSubMenu.icon
 //                                   size={28}
-//                                   className="text-blue-600"
+//                                   className="text-red-600"
 //                                 />
 //                               </motion.div>
 //                             )}
@@ -239,13 +239,13 @@
 //                             </motion.div>
 
 //                             <motion.div
-//                               className="bg-blue-50 p-6 rounded-xl border border-blue-100"
+//                               className="bg-red-50 p-6 rounded-xl border border-red-100"
 //                               initial={{ y: 20 }}
 //                               animate={{ y: 0 }}
 //                               transition={{ delay: 0.15 }}
 //                             >
 //                               <h3 className="font-semibold text-lg mb-4 flex items-center gap-2 text-gray-800">
-//                                 <span className="bg-blue-500 w-2 h-2 rounded-full"></span>
+//                                 <span className="bg-red-500 w-2 h-2 rounded-full"></span>
 //                                 Key Features
 //                               </h3>
 //                               <ul className="space-y-3">
@@ -258,7 +258,7 @@
 //                                       animate={{ opacity: 1 }}
 //                                       transition={{ delay: 0.2 + i * 0.05 }}
 //                                     >
-//                                       <span className="text-blue-500 mt-1">
+//                                       <span className="text-red-500 mt-1">
 //                                         <svg
 //                                           xmlns="http://www.w3.org/2000/svg"
 //                                           width="16"
@@ -281,13 +281,13 @@
 //                             </motion.div>
 
 //                             <motion.div
-//                               className="bg-white p-6 rounded-xl border border-blue-100 shadow-sm"
+//                               className="bg-white p-6 rounded-xl border border-red-100 shadow-sm"
 //                               initial={{ y: 20 }}
 //                               animate={{ y: 0 }}
 //                               transition={{ delay: 0.2 }}
 //                             >
 //                               <h3 className="font-semibold text-lg mb-4 flex items-center gap-2 text-gray-800">
-//                                 <span className="bg-blue-400 w-2 h-2 rounded-full"></span>
+//                                 <span className="bg-red-400 w-2 h-2 rounded-full"></span>
 //                                 Technologies
 //                               </h3>
 //                               <div className="flex flex-wrap gap-3">
@@ -295,7 +295,7 @@
 //                                   (tech, i) => (
 //                                     <motion.span
 //                                       key={i}
-//                                       className="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-medium border border-blue-200"
+//                                       className="bg-red-100 text-red-600 px-4 py-2 rounded-lg text-sm font-medium border border-red-200"
 //                                       initial={{ scale: 0 }}
 //                                       animate={{ scale: 1 }}
 //                                       transition={{
@@ -330,7 +330,7 @@
 //                             {menu.subMenu.slice(0, 4).map((item, i) => (
 //                               <motion.div
 //                                 key={i}
-//                                 className="bg-white p-6 rounded-xl border border-blue-100 cursor-pointer hover:border-blue-200 transition-all shadow-sm"
+//                                 className="bg-white p-6 rounded-xl border border-red-100 cursor-pointer hover:border-red-200 transition-all shadow-sm"
 //                                 onMouseEnter={() => setActiveSubMenu(item)}
 //                                 whileHover={{ y: -5 }}
 //                                 initial={{ opacity: 0, y: 10 }}
@@ -339,10 +339,10 @@
 //                               >
 //                                 <div className="flex items-center gap-4 mb-3">
 //                                   {item.icon && (
-//                                     <div className="bg-blue-100 p-2.5 rounded-lg">
+//                                     <div className="bg-red-100 p-2.5 rounded-lg">
 //                                       <item.icon
 //                                         size={20}
-//                                         className="text-blue-600"
+//                                         className="text-red-600"
 //                                       />
 //                                     </div>
 //                                   )}
@@ -465,7 +465,7 @@
 //       {menus.map((menu) => (
 //         <motion.li
 //           key={menu.name}
-//           className="px-4 py-2 rounded-lg cursor-pointer text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+//           className="px-4 py-2 rounded-lg cursor-pointer text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
 //           whileHover={{ scale: 1.05 }}
 //           whileTap={{ scale: 0.98 }}
 //           onClick={() => handleMenuClick(menu.path)}
@@ -489,7 +489,7 @@
 //           key={menu.name}
 //           to={menu.path}
 //           className={({ isActive }) =>
-//             `px-4 py-2 rounded-md font-medium transition-all ${isActive ? "text-gray-800 bg-blue-100" : "text-gray-800 hover:text-blue-600"
+//             `px-4 py-2 rounded-md font-medium transition-all ${isActive ? "text-gray-800 bg-red-100" : "text-gray-800 hover:text-red-600"
 //             }`
 //           }
 //         >
@@ -515,8 +515,8 @@ const DesktopMenu = ({ menus }) => {
           className={({ isActive }) =>
             `px-4 py-2 rounded-md font-medium transition-all ${
               isActive
-                ? "text-blue-600 bg-blue-100"
-                : "text-black hover:bg-blue-100 hover:text-blue-600"
+                ? "text-red-600 bg-red-100"
+                : "text-black hover:bg-red-100 hover:text-red-600"
             }`
           }
         >

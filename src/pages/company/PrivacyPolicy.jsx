@@ -2,7 +2,7 @@ import React from 'react'
 
 function PrivacyPolicy() {
     return (
-        <section className='section-margin section-padding'>
+        <section className='section-margin'>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-5">
                 <div>
                     <h2 className="text-5xl font-bold mb-4 text-gray-800 text-center">Privacy Policy</h2>

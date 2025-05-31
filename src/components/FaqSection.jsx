@@ -85,7 +85,7 @@ const FaqSection = () => {
   const rightFAQs = faqs.slice(half);
 
   return (
-    <section className="py-24 bg-skyblue text-gray-800 relative overflow-hidden">
+    <section className="py-24 bg-red-100 text-gray-800 relative overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-10 text-center text-gray-800">Frequently Asked Questions</h2>
 

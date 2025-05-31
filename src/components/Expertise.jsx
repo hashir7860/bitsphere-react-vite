@@ -20,31 +20,31 @@ const Expertise = () => {
       title: "UI/UX Design",
       bg: "https://invozone-backend.s3.us-east-1.amazonaws.com/Group_1000007680_1_19d09f6f39.webp",
       bullets: ["Wireframing", "Prototyping", "User Testing"],
-      color: "from-blue-400 to-blue-500"
+      color: "from-red-400 to-red-500"
     },
     {
       title: "Web Development",
       bg: "https://invozone-backend.s3.us-east-1.amazonaws.com/education_592ecc3d5c.webp",
       bullets: ["React", "TailwindCSS", "Node.js"],
-      color: "from-blue-400 to-blue-500"
+      color: "from-red-400 to-red-500"
     },
     {
       title: "Mobile Apps",
       bg: "https://invozone-backend.s3.us-east-1.amazonaws.com/travel_5213ff55c0.webp",
       bullets: ["Payment Gateway", "OpenAI Integration", "Real Time Update"],
-      color: "from-blue-400 to-blue-500"
+      color: "from-red-400 to-red-500"
     },
     {
       title: "Product Strategy",
       bg: "https://invozone-backend.s3.us-east-1.amazonaws.com/realestate_544e623be9.webp",
       bullets: ["MVP Design", "Market Fit", "Growth Hacking"],
-      color: "from-blue-400 to-blue-500"
+      color: "from-red-400 to-red-500"
     },
     {
       title: "Brand Identity",
       bg: "https://invozone-backend.s3.us-east-1.amazonaws.com/healthcare_b27e93b03c.webp",
       bullets: ["Logo", "Colors", "Typography"],
-      color: "from-blue-400 to-blue-500"
+      color: "from-red-400 to-red-500"
     },
   ];
 
@@ -58,7 +58,7 @@ const Expertise = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-medium tracking-wider text-blue-500 mb-2 block">
+          <span className="text-sm font-medium tracking-wider text-red-500 mb-2 block">
             OUR CAPABILITIES
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
@@ -70,20 +70,20 @@ const Expertise = () => {
           {/* Navigation Arrows */}
           <motion.button
             onClick={() => scrollCards("left")}
-            className="absolute -left-7 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-blue-100 hover:bg-blue-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
+            className="absolute -left-7 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-red-100 hover:bg-red-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <ChevronLeft className="text-blue-500 h-6 w-6" />
+            <ChevronLeft className="text-red-500 h-6 w-6" />
           </motion.button>
 
           <motion.button
             onClick={() => scrollCards("right")}
-            className="absolute -right-7 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-blue-100 hover:bg-blue-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
+            className="absolute -right-7 top-1/2 -translate-y-1/2 z-20 bg-white p-3 rounded-full shadow-lg border border-red-100 hover:bg-red-50 hidden cursor-pointer lg:flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <ChevronRight className="text-blue-500 h-6 w-6" />
+            <ChevronRight className="text-red-500 h-6 w-6" />
           </motion.button>
 
           {/* Cards Container */}
@@ -157,15 +157,15 @@ const Expertise = () => {
         <div className="flex justify-center gap-4 mt-8 lg:hidden">
           <button
             onClick={() => scrollCards("left")}
-            className="bg-blue-50 hover:bg-blue-100 p-3 rounded-full border border-blue-200 transition-all"
+            className="bg-red-50 hover:bg-red-100 p-3 rounded-full border border-red-200 transition-all"
           >
-            <ChevronLeft className="text-blue-500 h-5 w-5" />
+            <ChevronLeft className="text-red-500 h-5 w-5" />
           </button>
           <button
             onClick={() => scrollCards("right")}
-            className="bg-blue-50 hover:bg-blue-100 p-3 rounded-full border border-blue-200 transition-all"
+            className="bg-red-50 hover:bg-red-100 p-3 rounded-full border border-red-200 transition-all"
           >
-            <ChevronRight className="text-blue-500 h-5 w-5" />
+            <ChevronRight className="text-red-500 h-5 w-5" />
           </button>
         </div>
       </div>
@@ -184,7 +184,7 @@ const Expertise = () => {
               initial={{ scale: 0.9, y: 50 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 50 }}
-              className="relative bg-white rounded-2xl max-w-2xl w-full overflow-hidden border border-blue-100 shadow-xl"
+              className="relative bg-white rounded-2xl max-w-2xl w-full overflow-hidden border border-red-100 shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${expertiseData[activeCard]?.color} opacity-10`} />
@@ -200,15 +200,15 @@ const Expertise = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-6">
                   {expertiseData[activeCard]?.bullets.map((item, i) => (
-                    <div key={i} className="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                      <div className="text-blue-500 font-medium mb-2">{item}</div>
+                    <div key={i} className="bg-red-50 p-4 rounded-xl border border-red-100">
+                      <div className="text-red-500 font-medium mb-2">{item}</div>
                       <p className="text-gray-600 text-sm">
                         Comprehensive solutions tailored to your {expertiseData[activeCard]?.title.toLowerCase()} needs.
                       </p>
                     </div>
                   ))}
                 </div>
-                <button className="mt-8 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r  from-blue-400 to-blue-600 text-white font-medium hover:bg-blue-600 transition-colors">
+                <button className="mt-8 px-6 py-3 rounded-full cursor-pointer bg-gradient-to-r  from-red-400 to-red-600 text-white font-medium hover:bg-red-600 transition-colors">
                   Get Started with {expertiseData[activeCard]?.title}
                 </button>
               </div>

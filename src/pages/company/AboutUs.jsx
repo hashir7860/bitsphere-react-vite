@@ -8,32 +8,32 @@ const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('mission');
 
   const stats = [
-    { value: "50+", label: "Team Members", icon: <Users className="text-blue-500" /> },
-    { value: "150+", label: "Projects Delivered", icon: <Rocket className="text-blue-500" /> },
-    { value: "12+", label: "Countries Served", icon: <Globe className="text-blue-500" /> },
-    { value: "5+", label: "Years Experience", icon: <Clock className="text-blue-500" /> }
+    { value: "50+", label: "Team Members", icon: <Users className="text-red-500" /> },
+    { value: "150+", label: "Projects Delivered", icon: <Rocket className="text-red-500" /> },
+    { value: "12+", label: "Countries Served", icon: <Globe className="text-red-500" /> },
+    { value: "5+", label: "Years Experience", icon: <Clock className="text-red-500" /> }
   ];
 
   const values = [
     {
       title: "Innovation",
       description: "We push boundaries and explore new possibilities",
-      icon: <Code className="text-blue-500" />
+      icon: <Code className="text-red-500" />
     },
     {
       title: "Integrity",
       description: "Honest and ethical in all our dealings",
-      icon: <Shield className="text-blue-500" />
+      icon: <Shield className="text-red-500" />
     },
     {
       title: "Excellence",
       description: "Striving for the highest quality in everything",
-      icon: <Award className="text-blue-500" />
+      icon: <Award className="text-red-500" />
     },
     {
       title: "Passion",
       description: "We love what we do and it shows",
-      icon: <Heart className="text-blue-500" />
+      icon: <Heart className="text-red-500" />
     }
   ];
 
@@ -77,12 +77,12 @@ const AboutUs = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-32 contact-hero mx-auto text-center relative overflow-hidden"
+        className="py-20 contact-hero mx-auto text-center relative overflow-hidden"
       >
         {/* Animated background elements */}
         {/* <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-100 rounded-full filter blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-100 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-100 rounded-full filter blur-3xl"></div>
         </div> */}
 
         <motion.div
@@ -96,9 +96,9 @@ const AboutUs = () => {
             initial={{ y: -20 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-blue-200"
+            className="mb-6 inline-block bg-gradient-to-r from-red-100 to-red-200 px-6 py-2 rounded-full backdrop-blur-sm border border-red-200"
           >
-            <p className="text-sm font-medium text-blue-600">OUR STORY</p>
+            <p className="text-sm font-medium text-red-600">OUR STORY</p>
           </motion.div>
 
           <motion.h1
@@ -107,7 +107,7 @@ const AboutUs = () => {
             transition={{ delay: 0.4 }}
             className="text-4xl text-white md:text-6xl font-bold mb-6 leading-tight"
           >
-            Building the <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">Digital Future</span>
+            Building the <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600">Digital Future</span>
           </motion.h1>
 
           <motion.p
@@ -138,7 +138,7 @@ const AboutUs = () => {
               <div className="flex justify-center mb-4">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="bg-blue-100 p-3 rounded-full"
+                  className="bg-red-100 p-3 rounded-full"
                 >
                   {stat.icon}
                 </motion.div>
@@ -147,7 +147,7 @@ const AboutUs = () => {
                 initial={{ scale: 0.9 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                className="text-3xl font-bold mb-2 text-blue-500"
+                className="text-3xl font-bold mb-2 text-red-500"
               >
                 {stat.value}
               </motion.p>
@@ -175,8 +175,8 @@ const AboutUs = () => {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`w-full text-left px-4 py-3 rounded-lg transition-all ${activeTab === tab.id
-                    ? 'bg-blue-100 border-l-4 border-blue-500 text-blue-600 font-medium'
-                    : 'hover:bg-blue-50 text-gray-700'
+                    ? 'bg-red-100 border-l-4 border-red-500 text-red-600 font-medium'
+                    : 'hover:bg-red-50 text-gray-700'
                     }`}
                   whileHover={{ x: 5 }}
                 >
@@ -204,7 +204,7 @@ const AboutUs = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className="bg-blue-50 p-6 rounded-lg border border-blue-100"
+                      className="bg-red-50 p-6 rounded-lg border border-red-100"
                     >
                       <h3 className="text-xl font-semibold mb-3">Vision</h3>
                       <p className="text-gray-600">
@@ -213,7 +213,7 @@ const AboutUs = () => {
                     </motion.div>
                     <motion.div
                       whileHover={{ y: -5 }}
-                      className="bg-blue-50 p-6 rounded-lg border border-blue-100"
+                      className="bg-red-50 p-6 rounded-lg border border-red-100"
                     >
                       <h3 className="text-xl font-semibold mb-3">Approach</h3>
                       <p className="text-gray-600">
@@ -239,10 +239,10 @@ const AboutUs = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ scale: 1.02 }}
-                        className="bg-blue-50 p-6 rounded-lg border border-blue-100"
+                        className="bg-red-50 p-6 rounded-lg border border-red-100"
                       >
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="bg-blue-100 p-3 rounded-full">
+                          <div className="bg-red-100 p-3 rounded-full">
                             {value.icon}
                           </div>
                           <h3 className="text-xl font-semibold">{value.title}</h3>
@@ -262,7 +262,7 @@ const AboutUs = () => {
                   </p>
                   <div className="relative">
                     {/* Timeline line */}
-                    <div className="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+                    <div className="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-red-400 to-red-600"></div>
 
                     <div className="space-y-8">
                       {timeline.map((item, index) => (
@@ -274,10 +274,10 @@ const AboutUs = () => {
                           transition={{ delay: index * 0.1 }}
                           className="relative pl-12 md:pl-16"
                         >
-                          <div className="absolute left-0 md:left-8 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center -translate-x-1/2">
+                          <div className="absolute left-0 md:left-8 top-0 w-8 h-8 rounded-full bg-gradient-to-r from-red-500 to-red-600 flex items-center justify-center -translate-x-1/2">
                             <span className="text-white font-bold text-sm">{item.year}</span>
                           </div>
-                          <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                          <div className="bg-red-50 p-6 rounded-xl border border-red-100">
                             <h3 className="text-xl font-semibold mb-2">{item.event}</h3>
                             <p className="text-gray-600">{item.description}</p>
                           </div>
@@ -321,11 +321,11 @@ const AboutUs = () => {
                         whileHover={{ y: -5 }}
                         className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"
                       >
-                        <div className="w-full h-48 bg-blue-50 rounded-lg mb-4 flex items-center justify-center">
-                          <Users className="w-16 h-16 text-blue-400" />
+                        <div className="w-full h-48 bg-red-50 rounded-lg mb-4 flex items-center justify-center">
+                          <Users className="w-16 h-16 text-red-400" />
                         </div>
                         <h3 className="text-xl font-semibold">{member.name}</h3>
-                        <p className="text-blue-500 mb-3">{member.role}</p>
+                        <p className="text-red-500 mb-3">{member.role}</p>
                         <p className="text-gray-600">{member.bio}</p>
                       </motion.div>
                     ))}
@@ -338,7 +338,7 @@ const AboutUs = () => {
       </section>
 
       {/* Culture Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-blue-50 rounded-3xl my-16">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-red-50 rounded-3xl my-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Our Culture</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -376,7 +376,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.03 }}
-              className="bg-white p-6 rounded-xl border border-blue-100 shadow-sm"
+              className="bg-white p-6 rounded-xl border border-red-100 shadow-sm"
             >
               <div className="text-4xl mb-4">{item.emoji}</div>
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -392,23 +392,23 @@ const AboutUs = () => {
           initial={{ scale: 0.9 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 lg:p-12 relative overflow-hidden"
+          className="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-8 lg:p-12 relative overflow-hidden"
         >
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-400/20 rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-400/20 rounded-full filter blur-3xl"></div>
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-400/20 rounded-full filter blur-3xl"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-red-400/20 rounded-full filter blur-3xl"></div>
           </div>
 
           <h2 className="text-3xl font-bold mb-4 relative z-10 text-white">Join Our Journey</h2>
-          <p className="text-blue-100 max-w-2xl mx-auto mb-8 relative z-10">
+          <p className="text-red-100 max-w-2xl mx-auto mb-8 relative z-10">
             Whether you're looking for a technology partner or to join our team, we'd love to connect
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold shadow-lg"
+              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold shadow-lg"
             >
               Contact Us
             </motion.button>

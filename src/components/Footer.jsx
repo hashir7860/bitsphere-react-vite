@@ -16,17 +16,18 @@ const Footer = () => {
   };
 
   return (
+    // bg-[#000A24]
     <motion.footer
-      className="bg-[#000A24] text-white pt-20 pb-12 relative overflow-hidden border-t border-blue-100"
+      className="bg-gray-800 text-white pt-20 pb-12 relative overflow-hidden border-t border-red-100"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true, margin: "-100px" }}
     >
-      {/* Animated background elements - updated to light blue */}
+      {/* Animated background elements - updated to light red */}
       <div className="absolute inset-0 opacity-20">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.2, 0.1]
@@ -38,7 +39,7 @@ const Footer = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.15, 0.1]
@@ -64,7 +65,7 @@ const Footer = () => {
               className="flex items-center gap-3 mb-6"
               whileHover={{ x: 5 }}
             >
-              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">TechBasePro</span>
               </div>
             </motion.div> */}
@@ -75,9 +76,9 @@ const Footer = () => {
               whileHover={{ scale: 1.1, }} // Scale up and change background on hover
               className="flex items-center gap-3 mb-6"
             >
-              <div className="h-10 bg-blue-500 rounded-lg flex items-center justify-start px-4 cursor-pointer">
+              <div className="h-10 bg-red-500 rounded-lg flex items-center justify-start px-4 cursor-pointer">
                 <span className="text-white font-bold text-sm tracking-tight">
-                  TechBasePro
+                  Bitsphere Pro
                 </span>
               </div>
             </motion.div>
@@ -125,7 +126,7 @@ const Footer = () => {
                     href="#"
                     className="text-white hover:text-white transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
+                    <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                     {link}
                   </a>
                 </motion.li>
@@ -152,7 +153,7 @@ const Footer = () => {
                     href="#"
                     className="text-white hover:text-white transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1 h-1 bg-blue-400 rounded-full"></span>
+                    <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                     {service}
                   </a>
                 </motion.li>
@@ -171,11 +172,11 @@ const Footer = () => {
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
                 <MapPin className="text-white mt-1 flex-shrink-0" size={18} />
-                <span className="text-gray-600">1234 Tech Street, Silicon Valley, CA 94000</span>
+                <span className="text-white">W1K 3EP 49 Grosvenor square Mayfair, London</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-white" size={18} />
-                <a href="mailto:hello@ilt.com" className="text-white hover:text-white">sales@TechBasePro.com</a>
+                <a href="mailto:hello@ilt.com" className="text-white hover:text-white">sales@Bitshpere pro.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-white" size={18} />
@@ -192,11 +193,11 @@ const Footer = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
                   required
-                  className="bg-blue-50 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-300 border border-blue-200 flex-grow"
+                  className="bg-red-50 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-red-300 border border-red-200 flex-grow"
                 />
                 <motion.button
                   type="submit"
-                  className="bg-gradient-to-r  from-blue-400 to-blue-600 hover:bg-blue-600 text-white px-6 py-3 rounded-r-lg transition-colors"
+                  className="bg-gradient-to-r  from-red-400 to-red-600 hover:bg-red-600 text-white px-6 py-3 rounded-r-lg transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -221,13 +222,13 @@ const Footer = () => {
 
         {/* Copyright */}
         <motion.div
-          className="mt-16 pt-8 border-t border-blue-100 text-center text-white text-sm"
+          className="mt-16 pt-8 border-t border-red-100 text-center text-white text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p>© {new Date().getFullYear()} TechBasePro Technologies. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Bitshpere pro Technologies. All rights reserved.</p>
           <div className="flex justify-center gap-6 mt-4">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

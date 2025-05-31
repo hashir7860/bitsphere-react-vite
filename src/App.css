@@ -267,7 +267,7 @@ body {
 }
 
 .contact-hero {
-  min-height: 110vh;
+  /* min-height: 110vh; */
   background: url(assets/modern-equipped-computer-lab1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -289,7 +289,7 @@ body {
 }
 
 .free-consultant-btn {
-  background: #00a6ff;
+  /* background: #00a6ff; */
   font-size: 16px;
   color: var(--color-white);
   text-transform: capitalize;

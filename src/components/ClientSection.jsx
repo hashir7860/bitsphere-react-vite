@@ -27,9 +27,10 @@ const ClientsSection = () => {
   );
 
   return (
+    // bg-skyblue
     <section 
       ref={sectionRef} 
-      className="relative h-[300vh] client-section bg-skyblue"
+      className="relative h-[300vh] client-section bg-red-100"
       style={{ background }}
     >
       <div className="sticky top-0 py-15 w-full flex flex-col items-center justify-center px-4 overflow-hidden">
@@ -47,7 +48,7 @@ const ClientsSection = () => {
                 y: useTransform(scrollYProgress, [0, 0.2], [0, -50]),
               }}
             >
-              Trusted by <span className="text-blue-500">Innovators</span>
+              Trusted by <span className="text-red-500">Innovators</span>
             </motion.h2>
             <motion.p
               className="text-lg text-gray-600 max-w-2xl mx-auto"
@@ -98,7 +99,7 @@ const ClientsSection = () => {
                     y: -10,
                     transition: { duration: 0.3 }
                   }}
-                  className="p-6 rounded-xl bg-white border-2 border-blue-100 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center h-32 hover:border-blue-200"
+                  className="p-6 rounded-xl bg-white border-2 border-red-100 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center h-32 hover:border-red-200"
                 >
                   <img 
                     src={brand.logo} 
@@ -121,7 +122,7 @@ const ClientsSection = () => {
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute text-blue-100 text-2xl"
+                className="absolute text-red-100 text-2xl"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -134,7 +135,7 @@ const ClientsSection = () => {
             ))}
           </motion.div>
 
-          {/* Animated divider - updated to light blue */}
+          {/* Animated divider - updated to light red */}
           {/* <motion.div
             className="absolute bottom-0 left-0 w-full h-32"
             style={{
