@@ -248,7 +248,7 @@ body {
 }
 
 .hero {
-  min-height: 110vh;
+  /* min-height: 110vh; */
   background: url(assets/modern-equipped-computer-lab1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
