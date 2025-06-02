@@ -157,7 +157,7 @@ const ServicesSection = () => {
                   key={service.id}
                   className={`group p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
                       ? 'bg-[#00A6FF] text-white shadow-lg'
-                      : 'bg-blue-100 hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-red-100'
+                      : 'bg-blue-100 hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-[#00A6FF]'
                     }`}
                   onClick={() => setSelectedService(service)}
                   whileHover={{ y: -5 }}
@@ -187,7 +187,7 @@ const ServicesSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white rounded-2xl p-8 shadow-xl h-full border border-red-100"
+                className="bg-white rounded-2xl p-8 shadow-xl h-full border border-[#00A6FF]"
               >
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-gray-800">
                   <div className="p-2 bg-[#00A6FF] rounded-lg text-white">

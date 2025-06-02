@@ -190,7 +190,7 @@ const Hero = () => {
         // </div>
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="bg-white p-6 rounded-xl max-w-md w-full shadow-lg">
-            <h2 className="text-xl font-bold mb-4">Contact Us</h2>
+            <h2 className="text-xl font-bold mb-4 text-gray-800">Contact Us</h2>
             <form className="space-y-4">
               <input
                 placeholder="Name"

@@ -49,14 +49,14 @@ const Projects = () => {
             }}
             className="mt-16"
           >
-            <ChevronRight className="h-8 w-8 text-red-500 mx-auto rotate-90" />
+            <ChevronRight className="h-8 w-8 text-[#00A6FF] mx-auto rotate-90" />
           </motion.div>
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/30 z-0" />
       </div>
 
       {/* Project Sections */}
-      <div className="relative h-[400vh] bg-red-50">
+      <div className="relative h-[400vh] bg-blue-100">
         <Section1 scrollYProgress={scrollYProgress} />
         <Section2 scrollYProgress={scrollYProgress} />
         <Section3 scrollYProgress={scrollYProgress} />
@@ -64,7 +64,7 @@ const Projects = () => {
       </div>
 
       {/* Footer CTA */}
-      <div className="py-28 px-6 bg-gradient-to-b from-red-50 to-white">
+      <div className="py-28 px-6 bg-gradient-to-b from-blue-100 to-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
             Ready to start your project?
@@ -75,7 +75,7 @@ const Projects = () => {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(137, 207, 240, 0.5)" }}
             whileTap={{ scale: 0.98 }}
-            className="px-10 py-4 rounded-xl cursor-pointer bg-gradient-to-r  from-red-400 to-red-600 text-white font-semibold text-lg"
+            className="px-10 py-4 rounded-xl cursor-pointer bg-gradient-to-r  from-[#00A6FF] to-[#00A6FF] text-white font-semibold text-lg"
           >
             Get in Touch
             <ArrowRight className="inline ml-2" />
@@ -93,12 +93,12 @@ const ProjectCard = ({
   techStack, 
   videoUrl, 
   position = "left",
-  color = "red",
+  color = "blue",
   scale,
   rotate
 }) => {
   const colors = {
-    red: "bg-red-100 border-red-200",
+    red: "bg-blue-100 border-blue-200",
     sky: "bg-sky-100 border-sky-200",
     teal: "bg-teal-100 border-teal-200",
     cyan: "bg-cyan-100 border-cyan-200"
@@ -112,15 +112,15 @@ const ProjectCard = ({
       <div className={`relative rounded-3xl shadow-lg flex flex-col md:flex-row overflow-hidden w-[90%] max-w-6xl h-[70%] border-2 ${colors[color]}`}>
         {/* Content */}
         <div className={`w-full md:w-1/2 p-10 flex flex-col justify-center space-y-6 bg-white z-10 ${position === "right" ? "order-2" : ""}`}>
-          <div className="text-red-500 font-mono text-sm mb-2">FEATURED PROJECT</div>
+          <div className="text-[#00A6FF] font-mono text-sm mb-2">FEATURED PROJECT</div>
           <h2 className="text-4xl font-bold text-gray-800">{title}</h2>
           <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
           
           <div className="mt-4">
-            <div className="text-sm text-red-500 mb-3">TECHNOLOGIES USED</div>
+            <div className="text-sm text-[#00A6FF] mb-3">TECHNOLOGIES USED</div>
             <div className="flex flex-wrap gap-3">
               {techStack.map((tech, i) => (
-                <span key={i} className="px-3 py-1.5 bg-red-50 text-red-600 rounded-full text-sm border border-red-100">
+                <span key={i} className="px-3 py-1.5 bg-blue-50 text-[#00A6FF] rounded-full text-sm border border-[#00A6FF]">
                   {tech}
                 </span>
               ))}
@@ -129,7 +129,7 @@ const ProjectCard = ({
 
           <motion.button
             whileHover={{ x: 5 }}
-            className="flex items-center mt-8 text-red-500 group"
+            className="flex items-center mt-8 text-[#00A6FF] group"
           >
             <span className="mr-2">View Case Study</span>
             <motion.span
@@ -154,7 +154,7 @@ const ProjectCard = ({
             playsInline
             className="w-full h-full object-cover"
           />
-          <div className="absolute bottom-6 right-6 bg-white/80 rounded-full px-3 py-1 text-sm text-red-600 backdrop-blur-sm border border-red-100">
+          <div className="absolute bottom-6 right-6 bg-white/80 rounded-full px-3 py-1 text-sm text-[#00A6FF] backdrop-blur-sm border border-blue-100">
             Interactive Demo
           </div>
         </div>
