@@ -182,12 +182,12 @@ function App() {
 
       <Toaster position="top-right" reverseOrder={false} />
 
-      {/* <div className="text-center mt-4">
+      <div className="text-center my-4">
         <h1 className="text-2xl sm:text-md">
           👀 {onlineCount} {onlineCount === 1 ? "person is" : "people are"}{" "}
           viewing this site right now
         </h1>
-      </div> */}
+      </div>
     </Router>
   );
 }
