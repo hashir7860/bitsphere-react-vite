@@ -15,7 +15,7 @@ const services = [
       "Predictive Analytics"
     ],
     tech: [
-      { icon: <Cpu className="w-8 h-8" />, name: "TensorFlow", iconname: "ok" },
+      { icon: <Cpu className="w-8 h-8" />, name: "TensorFlow" },
       { icon: <Database className="w-8 h-8" />, name: "PyTorch" },
       { icon: <Server className="w-8 h-8" />, name: "OpenCV" }
     ]
@@ -163,14 +163,6 @@ const ServicesSection = () => {
                   whileHover={{ y: -5 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div
-                    className={`p-2 rounded-lg transition-colors duration-300 ${selectedService.id === service.id
-                        ? 'bg-white text-[#00A6FF]'
-                        : 'bg-[#00A6FF] text-white group-hover:bg-white group-hover:text-[#00A6FF]'
-                      }`}
-                  >
-                    {service.iconname}
-                  </div>
                   <div
                     className={`p-2 rounded-lg transition-colors duration-300 ${selectedService.id === service.id
                         ? 'bg-white text-[#00A6FF]'

@@ -122,7 +122,7 @@ const ClientsSection = () => {
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute text-red-100 text-2xl"
+                className="absolute text-[#00A6FF] text-2xl"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
