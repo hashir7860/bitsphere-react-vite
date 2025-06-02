@@ -31,9 +31,9 @@ function Portfolio() {
                         initial={{ y: -20 }}
                         animate={{ y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="mb-6 inline-block bg-gradient-to-r from-red-100 to-red-200 px-6 py-2 rounded-full backdrop-blur-sm border border-red-200"
+                        className="mb-6 inline-block bg-gradient-to-r from-blue-100 to-blue-200 px-6 py-2 rounded-full backdrop-blur-sm border border-[#00A6FF]"
                     >
-                        <p className="text-sm font-medium text-red-600">Our Projects</p>
+                        <p className="text-sm font-medium text-[#00A6FF]">Our Projects</p>
                     </motion.div>
 
                     <motion.h1
@@ -42,7 +42,7 @@ function Portfolio() {
                         transition={{ delay: 0.4 }}
                         className="text-4xl text-white md:text-6xl font-bold mb-6 leading-tight"
                     >
-                        Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600">Portfolio</span>
+                        Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A6FF] to-[#00A6FF]">Portfolio</span>
                     </motion.h1>
 
                     <motion.p

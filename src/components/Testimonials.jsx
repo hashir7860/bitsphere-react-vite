@@ -112,7 +112,7 @@ const Testimonials = () => {
               exit="exit"
               className="absolute inset-0 flex justify-center"
             >
-              <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl mx-4 border border-red-100 hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl mx-4 border border-[#00A6FF] hover:shadow-xl transition-shadow duration-300">
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <motion.div
                     initial={{ scale: 0.9 }}
@@ -123,9 +123,9 @@ const Testimonials = () => {
                     <img
                       src={testimonialItems[currentIndex].photo}
                       alt={testimonialItems[currentIndex].name}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-red-200 shadow-md"
+                      className="w-24 h-24 rounded-full object-cover border-4 border-[#00A6FF] shadow-md"
                     />
-                    <div className="absolute -bottom-2 -right-2 bg-red-500 text-white rounded-full p-2 shadow-lg">
+                    <div className="absolute -bottom-2 -right-2 bg-[#00A6FF] text-white rounded-full p-2 shadow-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                       </svg>
@@ -166,19 +166,19 @@ const Testimonials = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 md:-left-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg border border-red-100 cursor-pointer hover:bg-red-50 transition-all duration-300 hover:scale-110"
+            className="absolute left-0 md:-left-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg border border-[#00A6FF] cursor-pointer hover:bg-[#00A6FF] transition-all duration-300 hover:scale-110"
             aria-label="Previous testimonial"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#00A6FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 md:-right-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg border border-red-100 cursor-pointer hover:bg-red-50 transition-all duration-300 hover:scale-110"
+            className="absolute right-0 md:-right-12 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg border border-[#00A6FF] cursor-pointer hover:bg-[#00A6FF] transition-all duration-300 hover:scale-110"
             aria-label="Next testimonial"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#00A6FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>

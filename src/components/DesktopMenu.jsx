@@ -515,8 +515,8 @@ const DesktopMenu = ({ menus }) => {
           className={({ isActive }) =>
             `px-4 py-2 rounded-md font-medium transition-all ${
               isActive
-                ? "text-red-600 bg-red-100"
-                : "text-black hover:bg-red-100 hover:text-red-600"
+                ? "text-[#00A6FF] bg-blue-100"
+                : "text-black hover:bg-blue-100 hover:text-[#00A6FF]"
             }`
           }
         >

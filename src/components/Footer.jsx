@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     // bg-[#000A24]
     <motion.footer
-      className="bg-gray-800 text-white pt-20 pb-12 relative overflow-hidden border-t border-red-100"
+      className="bg-[#000A24] text-white pt-20 pb-12 relative overflow-hidden border-t border-[#00A6FF]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -27,7 +27,7 @@ const Footer = () => {
       {/* Animated background elements - updated to light red */}
       <div className="absolute inset-0 opacity-20">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00A6FF] rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.2, 0.1]
@@ -39,7 +39,7 @@ const Footer = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-red-100 rounded-full mix-blend-multiply filter blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#00A6FF] rounded-full mix-blend-multiply filter blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.15, 0.1]
@@ -76,7 +76,7 @@ const Footer = () => {
               whileHover={{ scale: 1.1, }} // Scale up and change background on hover
               className="flex items-center gap-3 mb-6"
             >
-              <div className="h-10 bg-red-500 rounded-lg flex items-center justify-start px-4 cursor-pointer">
+              <div className="h-10 bg-[#00A6FF] rounded-lg flex items-center justify-start px-4 cursor-pointer">
                 <span className="text-white font-bold text-sm tracking-tight">
                   Bitsphere Pro
                 </span>
@@ -126,7 +126,7 @@ const Footer = () => {
                     href="#"
                     className="text-white hover:text-white transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1 h-1 bg-red-400 rounded-full"></span>
+                    <span className="w-1 h-1 bg-[#00A6FF] rounded-full"></span>
                     {link}
                   </a>
                 </motion.li>
@@ -153,7 +153,7 @@ const Footer = () => {
                     href="#"
                     className="text-white hover:text-white transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1 h-1 bg-red-400 rounded-full"></span>
+                    <span className="w-1 h-1 bg-[#00A6FF] rounded-full"></span>
                     {service}
                   </a>
                 </motion.li>

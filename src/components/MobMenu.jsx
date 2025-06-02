@@ -129,7 +129,7 @@ const MobMenu = ({ menus }) => {
               to={menu.path}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `block py-2 px-3 rounded-md text-sm ${isActive ? "bg-red-100 text-red-600" : "text-gray-700 hover:bg-gray-100"
+                `block py-2 px-3 rounded-md text-sm ${isActive ? "bg-blue-100 text-[#00A6FF]" : "text-gray-700 hover:bg-gray-100"
                 }`
               }
             >

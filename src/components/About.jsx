@@ -119,8 +119,7 @@ function About() {
                         </form>
                     </div>
                 </div>
-            )
-            }
+            )}
             {/* End cta modal section */}
         </section>
 
