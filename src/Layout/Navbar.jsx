@@ -315,7 +315,7 @@ const Navbar = () => {
 
   return (
     <div className="relative z-50">
-      <header className="h-20 top-0 left-0 right-0 flex-center backdrop-blur-md border-b border-red-100 bg-white shadow-sm">
+      <header className="h-20 top-0 left-0 right-0 flex-center backdrop-blur-md border-b border-[#00A6FF] bg-white shadow-sm">
         <nav className="px-6 flex-center-between w-full max-w-7xl mx-auto">
           {/* Logo */}
           <motion.div
@@ -334,7 +334,7 @@ const Navbar = () => {
               className="relative"
             >
               <motion.div
-                className="relative w-12 h-12 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
+                className="relative w-12 h-12 bg-gradient-to-br from-[#00A6FF] to-[#00A6FF] rounded-xl flex items-center justify-center shadow-lg overflow-hidden"
                 whileHover={{ width: 120 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
@@ -360,7 +360,7 @@ const Navbar = () => {
                     }}
                   >
                     <span className="text-white font-bold text-xl tracking-tighter">
-                      <span className="text-red-100">B</span>SP
+                      <span className="text-[#00A6FF">B</span>SP
                     </span>
                   </motion.div>
                   <motion.div
@@ -378,7 +378,8 @@ const Navbar = () => {
                 </div>
                 {isHoveringLogo && (
                   <motion.div
-                    className="absolute inset-0 rounded-xl bg-red-500/20 blur-md"
+                    // className="absolute inset-0 rounded-xl bg-red-500/20 blur-md"
+                    className="absolute inset-0 rounded-xl bg-[#00A6FF] blur-md"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{
                       opacity: [0, 0.4, 0],
@@ -426,18 +427,18 @@ const Navbar = () => {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               transition={{ type: "spring", damping: 20, stiffness: 300 }}
-              className="bg-white rounded-2xl border border-red-100 max-w-md w-full p-8 relative shadow-xl"
+              className="bg-white rounded-2xl border border-[#00A6FF] max-w-md w-full p-8 relative shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-5 right-5 text-gray-500 hover:text-red-500 transition-colors"
+                className="absolute top-5 right-5 text-gray-500 hover:text-[#00A6FF] transition-colors"
               >
                 <X size={24} />
               </button>
 
               <div className="text-center mb-2">
-                <h3 className="text-2xl font-bold text-red-600">
+                <h3 className="text-2xl font-bold text-[#00A6FF]">
                   Schedule a Meeting
                 </h3>
                 <p className="text-gray-600 mt-2">
@@ -450,12 +451,12 @@ const Navbar = () => {
                 {/* ...Same as your existing code... */}
               </div>
 
-              <div className="mt-6 pt-6 border-t border-red-100">
+              <div className="mt-6 pt-6 border-t border-[#00A6FF]">
                 <p className="text-center text-gray-500 text-sm">
                   Prefer email?{" "}
                   <a
                     href="mailto:contact@example.com"
-                    className="text-red-400 hover:underline"
+                    className="text-[#00A6FF] hover:underline"
                   >
                     contact@example.com
                   </a>

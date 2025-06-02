@@ -19,12 +19,12 @@ const MeetingButton = ({setIsModalOpen,isModalOpen}) => {
           stiffness: 400,
           damping: 17
         }}
-        className="relative bg-gradient-to-r  from-red-600 to-red-500 text-white px-5 py-3 rounded-lg font-semibold text-lg flex items-center gap-2 overflow-hidden group cursor-pointer"
+        className="relative bg-gradient-to-r  from-[#00A6FF] to-#00A6FF text-white px-5 py-3 rounded-lg font-semibold text-lg flex items-center gap-2 overflow-hidden group cursor-pointer"
         onClick={() => setIsModalOpen(true)}
       >
         {/* Animated background effect */}
         <motion.span 
-          className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute inset-0 bg-gradient-to-r from-[#00A6FF] to-[#00A6FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: isModalOpen ? 0 : 1 }}
         />

@@ -75,9 +75,9 @@ const Hero = () => {
           className="mt-6 text-xl md:text-2xl text-white max-w-3xl leading-relaxed"
         >
           We craft{" "}
-          <span className="text-red-500 font-medium">cutting-edge</span>{" "}
+          <span className="text-[#00A6FF] font-medium">cutting-edge</span>{" "}
           applications, websites, and{" "}
-          <span className="text-red-500 font-medium">
+          <span className="text-[#00A6FF] font-medium">
             digital experiences{" "}
           </span>
           that drive measurable business growth.
@@ -124,7 +124,7 @@ const Hero = () => {
               damping: 17,
               duration: 0.3,
             }}
-            className="px-10 py-4 rounded-xl bg-gradient-to-r from-red-400 to-red-600 bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
+            className="px-10 py-4 rounded-xl bg-gradient-to-r from-[#00A6FF] to-[#00A6FF] bg-[length:200%_100%] hover:bg-[length:100%_100%] text-white font-semibold text-lg tracking-wide transition-all duration-500 ease-out"
           >
             Get Started
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -194,29 +194,29 @@ const Hero = () => {
             <form className="space-y-4">
               <input
                 placeholder="Name"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00A6FF] focus:border-transparent transition-all"
                 type="text"
               />
               <input
                 placeholder="Phone"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00A6FF] focus:border-transparent transition-all"
                 type="tel"
               />
               <input
                 placeholder="Email"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00A6FF] focus:border-transparent transition-all"
                 type="email"
               />
               <textarea
                 placeholder="Message"
                 rows="5"
-                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#00A6FF] focus:border-transparent transition-all"
               >
               </textarea>
               <div className="flex gap-3 justify-center">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+                  className="px-4 py-2 bg-[#00A6FF] text-white rounded hover:bg-[#00A6FF]"
                 >
                   Submit
                 </button>
