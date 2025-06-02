@@ -15,7 +15,7 @@ const services = [
       "Predictive Analytics"
     ],
     tech: [
-      { icon: <Cpu className="w-8 h-8" />, name: "TensorFlow" },
+      { icon: <Cpu className="w-8 h-8" />, name: "TensorFlow", iconname: "ok" },
       { icon: <Database className="w-8 h-8" />, name: "PyTorch" },
       { icon: <Server className="w-8 h-8" />, name: "OpenCV" }
     ]
@@ -122,7 +122,7 @@ const ServicesSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-5xl font-bold mb-4 text-gray-800">
-            Our <span className="text-red-500">Expertise</span>
+            Our <span className="text-[#00A6FF]">Expertise</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ducimus, asperiores fugiat quasi fugit ratione voluptate enim eos eum
@@ -156,8 +156,8 @@ const ServicesSection = () => {
                 <motion.button
                   key={service.id}
                   className={`group p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
-                      ? 'bg-red-500 text-white shadow-lg'
-                      : 'bg-red-100 hover:bg-red-500 hover:text-white text-gray-800 border border-red-100'
+                      ? 'bg-[#00A6FF] text-white shadow-lg'
+                      : 'bg-blue-100 hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-red-100'
                     }`}
                   onClick={() => setSelectedService(service)}
                   whileHover={{ y: -5 }}
@@ -165,8 +165,16 @@ const ServicesSection = () => {
                 >
                   <div
                     className={`p-2 rounded-lg transition-colors duration-300 ${selectedService.id === service.id
-                        ? 'bg-white text-red-500'
-                        : 'bg-red-500 text-white group-hover:bg-white group-hover:text-red-500'
+                        ? 'bg-white text-[#00A6FF]'
+                        : 'bg-[#00A6FF] text-white group-hover:bg-white group-hover:text-[#00A6FF]'
+                      }`}
+                  >
+                    {service.iconname}
+                  </div>
+                  <div
+                    className={`p-2 rounded-lg transition-colors duration-300 ${selectedService.id === service.id
+                        ? 'bg-white text-[#00A6FF]'
+                        : 'bg-[#00A6FF] text-white group-hover:bg-white group-hover:text-[#00A6FF]'
                       }`}
                   >
                     {service.icon}
@@ -190,7 +198,7 @@ const ServicesSection = () => {
                 className="bg-white rounded-2xl p-8 shadow-xl h-full border border-red-100"
               >
                 <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-gray-800">
-                  <div className="p-2 bg-red-500 rounded-lg text-white">
+                  <div className="p-2 bg-[#00A6FF] rounded-lg text-white">
                     {selectedService.icon}
                   </div>
                   {selectedService.name}
@@ -203,12 +211,12 @@ const ServicesSection = () => {
                     {selectedService.features.map((feature, index) => (
                       <motion.li
                         key={index}
-                        className="flex items-start gap-2 bg-red-50 p-3 rounded-lg border border-red-100"
+                        className="flex items-start gap-2 bg-blue-50 p-3 rounded-lg border border-[#00A6FF]"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: index * 0.1 }}
                       >
-                        <span className="text-red-500 mt-1">✓</span>
+                        <span className="text-[#00A6FF] mt-1">✓</span>
                         <span className="text-gray-700">{feature}</span>
                       </motion.li>
                     ))}
@@ -226,14 +234,14 @@ const ServicesSection = () => {
                         onHoverEnd={() => setHoveredTech(null)}
                       >
                         <motion.div
-                          className="bg-red-50 p-4 rounded-xl flex flex-col items-center gap-2 w-24 border border-red-100"
+                          className="bg-blue-50 p-4 rounded-xl flex flex-col items-center gap-2 w-24 border border-[#00A6FF]"
                           whileHover={{ y: -5 }}
                         >
-                          {React.cloneElement(tech.icon, { className: "w-8 h-8 text-red-500" })}
+                          {React.cloneElement(tech.icon, { className: "w-8 h-8 text-[#00A6FF]" })}
                           <AnimatePresence>
                             {hoveredTech === index && (
                               <motion.span
-                                className="absolute -bottom-6 bg-red-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+                                className="absolute -bottom-6 bg-blue-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
                                 initial={{ opacity: 0, y: 5 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 5 }}

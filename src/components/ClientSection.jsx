@@ -30,7 +30,7 @@ const ClientsSection = () => {
     // bg-skyblue
     <section 
       ref={sectionRef} 
-      className="relative h-[300vh] client-section bg-red-100"
+      className="relative h-[300vh] client-section bg-blue-100"
       style={{ background }}
     >
       <div className="sticky top-0 py-15 w-full flex flex-col items-center justify-center px-4 overflow-hidden">
@@ -48,7 +48,7 @@ const ClientsSection = () => {
                 y: useTransform(scrollYProgress, [0, 0.2], [0, -50]),
               }}
             >
-              Trusted by <span className="text-red-500">Innovators</span>
+              Trusted by <span className="text-[#00A6FF]">Innovators</span>
             </motion.h2>
             <motion.p
               className="text-lg text-gray-600 max-w-2xl mx-auto"
@@ -99,7 +99,7 @@ const ClientsSection = () => {
                     y: -10,
                     transition: { duration: 0.3 }
                   }}
-                  className="p-6 rounded-xl bg-white border-2 border-red-100 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center h-32 hover:border-red-200"
+                  className="p-6 rounded-xl bg-white border-2 border-[#00A6FF] shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center h-32 hover:border-[#00A6FF]"
                 >
                   <img 
                     src={brand.logo} 
