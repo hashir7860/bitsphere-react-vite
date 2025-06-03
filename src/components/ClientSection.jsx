@@ -96,7 +96,8 @@ const ClientsSection = () => {
                     rotate,
                   }}
                   whileHover={{
-                    y: -10,
+                    // y: -10,
+                    y: -5,
                     transition: { duration: 0.3 }
                   }}
                   className="p-6 rounded-xl bg-white border-2 border-[#00A6FF] shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center h-32 hover:border-[#00A6FF]"
