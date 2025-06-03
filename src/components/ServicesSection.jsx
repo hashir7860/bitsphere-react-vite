@@ -156,8 +156,8 @@ const ServicesSection = () => {
                 <motion.button
                   key={service.id}
                   className={`group p-5 rounded-xl text-left transition-all duration-300 flex items-start gap-3 ${selectedService.id === service.id
-                      ? 'bg-[#00A6FF] text-white shadow-lg'
-                      : 'bg-blue-100 hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-[#00A6FF]'
+                    ? 'bg-[#00A6FF] text-white shadow-lg'
+                    : 'bg-blue-100 hover:bg-[#00A6FF] hover:text-white text-gray-800 border border-[#00A6FF]'
                     }`}
                   onClick={() => setSelectedService(service)}
                   whileHover={{ y: -5 }}
@@ -165,8 +165,8 @@ const ServicesSection = () => {
                 >
                   <div
                     className={`p-2 rounded-lg transition-colors duration-300 ${selectedService.id === service.id
-                        ? 'bg-white text-[#00A6FF]'
-                        : 'bg-[#00A6FF] text-white group-hover:bg-white group-hover:text-[#00A6FF]'
+                      ? 'bg-white text-[#00A6FF]'
+                      : 'bg-[#00A6FF] text-white group-hover:bg-white group-hover:text-[#00A6FF]'
                       }`}
                   >
                     {service.icon}
@@ -231,7 +231,7 @@ const ServicesSection = () => {
                         >
                           {React.cloneElement(tech.icon, { className: "w-8 h-8 text-[#00A6FF]" })}
                           <AnimatePresence>
-                            {hoveredTech === index && (
+                            {/* {hoveredTech === index && (
                               <motion.span
                                 className="absolute -bottom-6 bg-blue-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
                                 initial={{ opacity: 0, y: 5 }}
@@ -240,7 +240,17 @@ const ServicesSection = () => {
                               >
                                 {tech.name}
                               </motion.span>
-                            )}
+                            )} */}
+                            {/* {React.cloneElement(tech.icon, { className: "w-8 h-8 text-[#00A6FF]" })}
+                            <span className="text-sm text-gray-700 text-center mt-2">{tech.name}</span> */}
+                            <motion.span
+                                className="absolute -bottom-8 bg-blue-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 5 }}
+                              >
+                                {tech.name}
+                              </motion.span>
                           </AnimatePresence>
                         </motion.div>
                       </motion.div>
